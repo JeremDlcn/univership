@@ -283,8 +283,8 @@ header img {
 	justify-content: space-between;
 	position: relative;
 	transition-duration: .7s;
+	z-index: 3;
 }
-
 #select > div:hover{
 	margin-left: 100px;
 	margin-right: 100px;
@@ -488,5 +488,7 @@ progress::-ms-fill {
 
 /*-----Mobile Large-----*/
 @media screen and (max-width: 600px) {
-
+	header > img {
+		margin-top: 0!important;
+	}
 }	
