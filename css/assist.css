@@ -150,6 +150,7 @@ main > h1 {
 
 #faq h1, #faq hr{
 	align-self: center;
+	text-align: center;
 }
 
 main > hr {
@@ -236,7 +237,7 @@ progress::-ms-fill {
 	background-color: var(--purple);	
 }
 
-button {
+#download button {
 	background-color: var(--main-color);
 	color: var(--main-font);
 	font-size: 1.5rem;
@@ -253,7 +254,7 @@ button {
 }
 
 #download table tr {
-	height: 50px;
+	padding: .7rem;
 }
 
 #download th[colspan="2"] {
@@ -385,7 +386,7 @@ button {
 	}
 	#help a {
 		margin: 2rem 0!important;
-		width: 50%!important;
+		width: 70%!important;
 	}
 
 
@@ -401,5 +402,28 @@ button {
 	}
 	#download table td, #download table th {
 		min-width: 80px!important;
+	}
+
+	#download button {
+		font-size: 1.1rem;
+	}
+
+	main:not(#help):not(#download) {
+		padding: 0 10vw;
+		padding-bottom: 4rem;
+	}
+
+	summary h2 {
+		font-size: 1.2rem;
+	}
+	details {
+		font-size: .9rem;
+	}
+	main > h1 {
+		font-size: 2.3rem;
+		text-align: center;
+	}
+	main > p {
+		font-size: 1rem;
 	}
 }
