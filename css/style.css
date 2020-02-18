@@ -437,6 +437,9 @@ progress::-ms-fill {
 	.containSpeed img {
 		width: 80vw;
 	}
+	.spade {
+		display: none;
+	}
 	#game,#select {
 		flex-direction: column;
 		align-items: center;
@@ -453,17 +456,12 @@ progress::-ms-fill {
 		display: none;
 	}
 	#feature {
-		padding-top: 5rem;
-				height: auto;
+		height: auto;
 	}
 	#feature section {
 		justify-content: center!important;
 		padding-left: 0!important;
 		margin-top: 3rem;
-
-	}
-	#feature section img {
-		display: none;
 	}
 	#feature div {
 		width: auto!important;
@@ -479,10 +477,10 @@ progress::-ms-fill {
 		height: auto;
 	}
 	#select > div:nth-child(odd) {
-		left: 8vw;
+		left: 16vw;
 	}
 	#select > div:nth-child(even) {
-		left: -8vw;
+		left: -16vw;
 	}
 }
 
@@ -491,4 +489,43 @@ progress::-ms-fill {
 	header > img {
 		margin-top: 0!important;
 	}
-}	
+	#main {
+		align-items: flex-start;
+		padding-top: 5rem;
+		height: 70vh;
+	}
+	#game {
+		height: auto;
+		padding: 3rem 0;
+	}
+	#game div:first-of-type{
+		width: auto;
+		padding: 0 2rem;
+	}
+
+	#feature section {
+		display: flex;
+		flex-direction: column-reverse;
+		justify-content: flex-start;
+		margin-top: 0;
+	}
+
+	#feature > section:last-of-type {
+		flex-direction: column;
+		margin-top: 6rem;
+		padding-bottom: 4rem;
+	}
+
+
+	#feature section:first-of-type img {
+		width: 100vw;
+	}
+
+	#feature > section:last-of-type img {
+		width: 70vw;
+	}
+
+	.shadeM {
+		bottom:-20px;
+	}
+}
