@@ -491,7 +491,7 @@ progress::-ms-fill {
 	}
 	#main {
 		align-items: flex-start;
-		padding-top: 5rem;
+		padding-top: 7rem;
 		height: 70vh;
 	}
 	#game {
@@ -500,6 +500,10 @@ progress::-ms-fill {
 	}
 	#game div:first-of-type{
 		width: auto;
+		padding: 0 2rem;
+	}
+
+	#feature {
 		padding: 0 2rem;
 	}
 
@@ -524,8 +528,36 @@ progress::-ms-fill {
 	#feature > section:last-of-type img {
 		width: 70vw;
 	}
+	#feature h2 {
+		font-size: 1.2rem;
+	}
 
+	#feature p {
+		width: auto!important;
+		font-size: .8rem;
+		line-height: 20px;
+	}
+
+	#feature section:first-of-type div:first-of-type h2{
+		width: auto!important;
+	}
+	.shadeT, .shadeMM {
+		width: 100vw;
+		left: 0;
+	}
 	.shadeM {
 		bottom:-20px;
+	}
+
+	#playing h2 {
+		font-size: 1.5rem;
+	}
+
+	#playing h3 {
+		font-size: 1rem;
+	}
+	#playing button, #main button {
+		font-size: 1rem;
+		letter-spacing: 1px;
 	}
 }

@@ -37,6 +37,9 @@ footer div:last-of-type a{
 	#social {
 		margin-left: 0;
 	}
+	footer a{
+		margin: 1rem 0;
+	}
 	footer > div:last-of-type {
 		flex-direction: column;
 		align-items: center;
