@@ -122,6 +122,9 @@ a:hover {
 	flex-direction: column;
 	padding: 10rem 10%;
 }
+#all > section:first-of-type{
+	margin-bottom: 4rem;
+}
 
 #all button {
 	background-color: var(--medium-gray);
@@ -129,8 +132,8 @@ a:hover {
 	color: var(--main-font);
 	padding: 10px 15px;
 	font-size: 1.2rem;
-	margin-bottom: 4rem;
 	margin-right: 1rem;
+	margin-bottom: 1rem;
 }
 
 article {
@@ -177,4 +180,71 @@ article b {
 		height: auto;
 		width: auto;
 	}
+
+	#highlighted img{
+		width: 100%;
+	}
+	#highlighted div {
+		width: auto;
+		margin-left: 0;
+	}
+	#highlighted::before{
+		content: 'À la une';
+		font-size: 1.2rem;
+		margin-bottom: 1rem;
+		font-weight: 900;
+		color: var(--light-gray);
+	}
+
+	#highlighted h2{
+		font-size: 1.5rem;	
+	}
+
+	#highlighted p {
+		font-size: .8rem;
+	}
+
+	#side::before {
+		content: 'Articles récents';
+		font-size: 1.2rem;
+		margin-bottom: 1rem;
+		font-weight: 900;
+		color: var(--light-gray);
+	}
+
+	#side h2 {
+		font-size: 1.2rem;
+	}
+	#side p {
+		font-size: .8rem;
+	}
+
+	#side div {
+		width: 100%;
+		margin-bottom: 4rem;
+	}
+
+	article > div{
+		width: 100%!important;
+	}
+	article  > div:last-of-type > div{
+		margin-bottom: 1rem;
+	}
+	#all button {
+		font-size: 1rem;
+	}
 }	
+
+@media screen and (max-width: 500px) {
+	article h2 {
+		font-size: 1.2rem;
+	}	
+	article p{
+		font-size: .8rem;
+	}
+	article > div:last-of-type {
+		padding: 1rem 1rem;
+	}
+
+
+}
