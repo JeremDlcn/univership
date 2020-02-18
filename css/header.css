@@ -47,7 +47,6 @@ header a{
 }
 
 .navbar #dropdown{
-	height: 40vh;
 	width: 100vw;
 	position: absolute;
 	top: 8vh;
