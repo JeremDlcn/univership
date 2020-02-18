@@ -3,7 +3,6 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="theme-color" content="#111111" />
 		<link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet">
 		<link rel="icon" type="icon/png" href="image/favicon.png"/>
 		<link rel="stylesheet" href="css/style.css">
@@ -13,7 +12,7 @@
 	</head>
 	<body>
 		<header>
-			<img src="image/solo.png">
+			<img src="image/logo.png">
 			<div>
 				<a href="index.html">Accueil</a>
 				<a href="subscription.html">Abonnement</a>
@@ -21,6 +20,17 @@
 				<a href="help.html">Assistance</a>
 				<a href="download.html">Téléchargement</a>
 			</div>
+			<nav class="navbar">
+				<div class="banner"></div>
+				<button id="burger"><img src="image/burger.png" alt="accéder au menu"></button>
+				<div id="dropdown">
+					<a href="index.html">Accueil</a>
+					<a href="subscription.html">Abonnement</a>
+					<a href="news.html">Mise à jour</a>
+					<a href="help.html">Assistance</a>
+					<a href="download.html">Téléchargement</a>
+				</div>
+			</nav>
 		</header>
 		<main>
 			<section id="main">
@@ -135,5 +145,6 @@
 				</div>
 			</footer>
 			<script src="js/animation.js"></script>
+			<script src="js/navbar.js"></script>
 	</body>
 </html>

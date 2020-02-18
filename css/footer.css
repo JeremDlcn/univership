@@ -29,16 +29,6 @@ footer div:last-of-type a{
 
 
 @media screen and (max-width: 1000px) {
-	main, footer, header {
-		display: none;
-	}
-	body::after{
-		content: '🚧 Construction en cours 🚧';
-		font-size: 1.8vh;
-		line-height: 100vh;
-		margin-right: 35%;
-		margin-left: 35%;
-	}
 	footer {
 		flex-direction: column;
 		height: auto;
