@@ -367,19 +367,32 @@ progress::-ms-fill {
 }
 
 #connect main input {
-	padding: .5rem 1rem;
 	min-width: 30vw;
-	margin: .5rem 0;
+	outline: none;
 }
 
 .bend {
 	transform: skewX(-15deg);
+	background-color: var(--medium-gray);
+	padding: .7rem 1rem;
+	margin: 2rem 0;
 }
 .bend input{
 	transform: skewX(15deg);
+	background-color: transparent;
+	border: none;
+	font-size: 1.2rem;
+	color: var(--main-font);
 }
 
-
+.error {
+	background-color: red;
+	transform: skewX(15deg);
+	padding: .5rem 1rem;
+}
+.error p {
+	transform: skewX(-15deg);
+}
 /*----------------------------------------------------------------------------------------------*/
 /*-----------------------------------------Responsive-------------------------------------------*/
 
