@@ -337,6 +337,11 @@ progress::-ms-fill {
 	padding: 0 2rem;
 }
 
+#connect main {
+	justify-content: space-between;
+	height: 80%;
+}
+
 #connect button{
 	border: none;
 	padding: .5rem 1rem;
@@ -352,6 +357,8 @@ progress::-ms-fill {
 	background-color: var(--purple);
 	color: var(--main-font);
 	margin: 2rem 0;
+	align-self: center;
+	font-size: 1.2rem;
 }
 
 #connect header button img{
@@ -388,10 +395,11 @@ progress::-ms-fill {
 .error {
 	background-color: red;
 	transform: skewX(15deg);
-	padding: .5rem 1rem;
+	padding: .7rem 1rem;
 }
 .error p {
 	transform: skewX(-15deg);
+	font-weight: bold;
 }
 /*----------------------------------------------------------------------------------------------*/
 /*-----------------------------------------Responsive-------------------------------------------*/
