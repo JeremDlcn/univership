@@ -332,8 +332,52 @@ progress::-ms-fill {
 	margin: 1rem;
 }
 
+/* Connexion */
+#connect header{
+	padding: 0 2rem;
+}
+
+#connect button{
+	border: none;
+	padding: .5rem 1rem;
+}
+
+#connect header button {
+	background-color: var(--main-color);
+	border: 2px solid var(--purple);
+	color: var(--main-font);
+}
+
+#connect main button{
+	background-color: var(--purple);
+	color: var(--main-font);
+	margin: 2rem 0;
+}
+
+#connect header button img{
+	width: 15px;
+	margin-right: 1rem;
+}
 
 
+#connect main > div{
+	display: flex;
+	flex-direction: column;
+	
+}
+
+#connect main input {
+	padding: .5rem 1rem;
+	min-width: 30vw;
+	margin: .5rem 0;
+}
+
+.bend {
+	transform: skewX(-15deg);
+}
+.bend input{
+	transform: skewX(15deg);
+}
 
 
 /*----------------------------------------------------------------------------------------------*/
