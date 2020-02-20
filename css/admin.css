@@ -194,4 +194,49 @@ figcaption {
 .tools a {
 	font-size: .8rem;
 	font-weight: 900;
+	color: var(--purple);
+	font-weight: 800;
+}
+.tools a:last-child {
+	color: red;
+}
+
+@media screen and (max-width: 800px) {
+	main {
+		width: 100vw;
+	}
+	#topArticle {
+		flex-wrap: wrap;
+	}
+
+	#topArticle button {
+		margin: 2rem 0;
+	}
+	nav {
+		display: none;
+	}
+
+	.article {
+		flex-direction: column;
+	}
+	.article > div > img {
+		width: 100%;
+	}
+	.corps {
+		margin-top: 1rem;
+	}
+	figure {
+		max-width: 50px;
+		align-self: flex-end;
+		margin: 1rem 2rem;
+	}
+	.tools a:last-child {
+		margin-left: 2rem;
+	}
+	main h1{
+		font-size: 1.7rem;
+	}
+	main > section h2 {
+		font-size: 1rem;
+	}
 }

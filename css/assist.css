@@ -345,6 +345,7 @@ progress::-ms-fill {
 #connect button{
 	border: none;
 	padding: .5rem 1rem;
+	margin: 1rem 0;
 }
 
 #connect header button {
@@ -443,6 +444,14 @@ progress::-ms-fill {
 		display: flex;
 		flex-direction: column;
 	}
+
+	#connect header button{
+		font-size: .7rem;
+		padding: .3rem .5rem;
+	}
+	#connect button img {
+		width: 10px!important;
+	}
 }	
 
 
@@ -504,4 +513,12 @@ progress::-ms-fill {
 	#sub section {
 		width: 70vw;
 	}
+	#connect header {
+		position: static!important;
+	}
+	#connect header > img {
+		position: static;
+		width: 150px;
+	}
+
 }
