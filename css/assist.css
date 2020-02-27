@@ -196,7 +196,9 @@ summary h2 {
 	font-weight: normal;
 }
 
-
+#help, #download, #sub {
+	min-height: 80vh;
+}
 
 
 /*Download*/
