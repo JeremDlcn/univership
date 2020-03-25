@@ -21,10 +21,10 @@ let db = new sq.Database("./database.db", err => {
 
 
 
-
-app.get(':id', (req, res) =>{
+// Récupérer la liste complète des articles
+app.get('/list', (req, res) =>{
 	let index = Number(req.params.id);
-	db.each("SELECT * FROM name WHERE id= ?", [index] , (err,row)=>{
+	db.each("SELECT * FROM article WHERE id= ?", [index] , (err,row)=>{
 		if (err) {
 			console.log(err);
 		} else {
@@ -34,22 +34,49 @@ app.get(':id', (req, res) =>{
 })
 
 
+//Récupérer un article spécifique
+app.get('/article/:id', (req, res) =>{
+	const article = articles.find(a => a.id == req.params.id);
+	res.json(article);
+})
+
+
+
 
 
 
 //création d'un article
-app.post('/create/:id', (req, res)=> {
-	db.run("INSERT INTO article VALUES(?,?,?,?,?,?,?)", [index, "title", "category", "content", "date", "img", "public"]);
+app.post('/create', (req, res)=> {
+	const corps = req.body;
 
+	// Ajouté l'article dans la table "article"
+	db.run("INSERT INTO article (title, category, content, date, img, visibility) VALUES(?,?,?,?,?,?)", [corps.title, corps.category, corps.content, corps.date, corps.img, corps.visibility]);
 	res.send('ok');
 });
+
+
+
 
 //Modification d'un article
 app.post('/edit/:id', (req, res)=> {
 	const index = Number(req.params.id)+1;
-	const corps = res
+	const corps = req.body;
+
+	// Mettre à jour la ligne lié à l'article sélectionné avec son id
 	db.run("UPDATE article SET title = ?, category = ?, content = ?, date = ?, img = ?, visibility = ? WHERE id = ?", [corps.title, corps.category, corps.content, corps.date, corps.img, corps.visibility, index]);
 
+	res.send('ok');
+});
+
+
+
+
+//Suppression d'un article
+app.delete('/delete/:id', (req, res)=> {
+	const index = Number(req.params.id)+1;
+
+	// Mettre à jour la ligne lié à l'article sélectionné avec son id
+	db.run("DELETE FROM article WHERE id = ?", [index]);
 	res.send('ok');
 });
 

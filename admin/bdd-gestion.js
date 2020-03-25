@@ -18,12 +18,12 @@ let db = new sq.Database("./database.db", err => {
 view();
 
 function create() {
-	db.run("CREATE TABLE article(id INT, title TEXT, category TEXT, content TEXT, date TEXT, img TEXT, visibility TEXT)");	
+	db.run("CREATE TABLE article(id INTEGER PRIMARY KEY NOT NULL, title TEXT, category TEXT, content TEXT, date TEXT, img TEXT, visibility TEXT)");	
 }
 
 
 function insert(index) {
-	db.run("INSERT INTO article VALUES(?,?,?,?,?,?,?)", [index, "title", "category", "content", "date", "img", "public"]);
+	db.run("INSERT INTO article (title, category, content, date, img, visibility) VALUES(?,?,?,?,?,?)", ["title", "category", "content", "date", "img", "public"]);
 }
 
 
