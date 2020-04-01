@@ -23,8 +23,7 @@ let db = new sq.Database("./database.db", err => {
 
 // Récupérer la liste complète des articles
 app.get('/list', (req, res) =>{
-	let index = Number(req.params.id);
-	db.each("SELECT * FROM article WHERE id= ?", [index] , (err,row)=>{
+	db.each("SELECT * FROM article", (err,row)=>{
 		if (err) {
 			console.log(err);
 		} else {
@@ -36,8 +35,14 @@ app.get('/list', (req, res) =>{
 
 //Récupérer un article spécifique
 app.get('/article/:id', (req, res) =>{
-	const article = articles.find(a => a.id == req.params.id);
-	res.json(article);
+	let index = Number(req.params.id);
+	db.each("SELECT * FROM article", [index] , (err,row)=>{
+		if (err) {
+			console.log(err);
+		} else {
+			res.json(row.nom);
+		}
+	});
 })
 
 
