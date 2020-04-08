@@ -174,7 +174,7 @@ main > section > a {
 figure {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
+	justify-content: flex-end;
 }
 
 figcaption {
@@ -189,6 +189,8 @@ figcaption {
 
 .tools div {
 	text-align: end;
+	display: flex;
+	flex-direction: column;
 }
 
 .tools a {
