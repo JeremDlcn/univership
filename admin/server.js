@@ -7,8 +7,6 @@ app.use(cors());
 app.use(express.json());	//on va récupérer les requête en json
 
 
-
-
 // Connexion à la base de données
 let db = new sq.Database("./database.db", err => {
   if (err) {
@@ -18,17 +16,12 @@ let db = new sq.Database("./database.db", err => {
 });
 
 
-
-
-
 // Récupérer la liste complète des articles
 app.get('/list', (req, res) =>{
-	db.each("SELECT * FROM article", (err,row)=>{
-		if (err) {
-			console.log(err);
-		} else {
-			res.json(row.nom);
-		}
+	let tab = []
+	db.all("SELECT * FROM article", (err,row)=>{
+		//console.log(row)
+		res.json(row)
 	});
 })
 
@@ -36,7 +29,7 @@ app.get('/list', (req, res) =>{
 //Récupérer un article spécifique
 app.get('/article/:id', (req, res) =>{
 	let index = Number(req.params.id);
-	db.each("SELECT * FROM article", [index] , (err,row)=>{
+	db.each("SELECT * FROM article", [index], (err,row)=>{
 		if (err) {
 			console.log(err);
 		} else {
@@ -44,10 +37,6 @@ app.get('/article/:id', (req, res) =>{
 		}
 	});
 })
-
-
-
-
 
 
 //création d'un article
@@ -58,8 +47,6 @@ app.post('/create', (req, res)=> {
 	db.run("INSERT INTO article (title, category, content, date, img, visibility) VALUES(?,?,?,?,?,?)", [corps.title, corps.category, corps.content, corps.date, corps.img, corps.visibility]);
 	res.send('ok');
 });
-
-
 
 
 //Modification d'un article
@@ -74,8 +61,6 @@ app.post('/edit/:id', (req, res)=> {
 });
 
 
-
-
 //Suppression d'un article
 app.delete('/delete/:id', (req, res)=> {
 	const index = Number(req.params.id)+1;
@@ -84,8 +69,6 @@ app.delete('/delete/:id', (req, res)=> {
 	db.run("DELETE FROM article WHERE id = ?", [index]);
 	res.send('ok');
 });
-
-
 
 
 app.listen(3000, ()=> console.log('Server started! 🎉'));
