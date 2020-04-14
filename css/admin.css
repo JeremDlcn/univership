@@ -55,6 +55,36 @@ nav {
 	position: sticky;
 	position: -webkit-sticky;
 	top: 0;
+	display: grid;
+	grid-template-rows: 20% 60% 20%;
+}
+
+.heading img {
+	width: 50%;
+	margin: 1.5rem 2rem;
+}
+
+.menu a, .deconnect, .menu div {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	padding: 1rem 2rem;
+}
+
+.menu div {
+	background-color: var(--purple);
+}
+.menu a:hover {
+	background-color: var(--lightM-gray);
+}
+
+.menu img, .deconnect img {
+	width: 2rem;
+	margin-right: 2rem;
+}
+
+.deconnect {
+	align-self: flex-end;
 }
 
 main {

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
+	<head>
+		<meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet">
         <meta name="theme-color" content="#333333"/>
@@ -9,10 +9,10 @@
         <link rel="stylesheet" href="../css/admin.css">
         <link rel="stylesheet" href="../css/header.css">
         <link rel="stylesheet" href="../css/footer.css">
-        <title>Articles - Admin</title>
-    </head>
-    <body>
-        <nav>
+		<title>Modification - Admin</title>
+	</head>
+	<body>
+       <nav>
             <section class="heading">
                 <img src="../image/logo.png" alt="">
             </section>
@@ -48,37 +48,64 @@
             </section>
         </nav>
         <main>
-            <section id="topArticle">
-                <h1>Articles</h1>
-                <a href="edit-article.html"><button id="write"><img src="../image/icon/document.png">Écrire un Article</button></a>
+        	<h1>Modification</h1>
+        	<section id="manage-races">
+        		<h2>Races</h2>
+        		<div>
+	        		<label>Nom</label>
+	        		<select></select>	
+        		</div>
+        		<div>
+					<label>Description de la race</label>
+					<textarea></textarea>
+        		</div>
+        		<div>
+        			<div>
+        				<label>Vitesse</label>
+        				<input type="text" name="">
+        			</div>
+        			<div>
+        				<label>Puissance</label>
+        				<input type="text" name="">
+        			</div>
+        			<div>
+        				<label>Précision</label>
+        				<input type="text" name="">
+        			</div>
+        		</div>
             </section>
-            <section id="listArticles">
-                <h2>Liste des articles</h2>
-                <article>
-                    <div class="article">
-                        <div>
-                            <img src="../image/news/news1.png">
-                        </div>
-                        <div class="corps">
-                            <h3>Title of the article</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
-                        </div>
-                        <div class="tools">
-                            <figure>
-                                <figcaption>Public</figcaption>
-                                <img src="../image/icon/eye.png" class="visibility" title="Visibilité">
-                            </figure>
-                            <div>
-                                <a href="">Modifier</a>
-                                <a href="">Supprimer</a>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-            </section>
+        	<section id="manage-specs">
+        		<div>
+	        		<label>Types de configuration</label>
+	        		<select></select>	
+        		</div>
+        		<div>
+        			<div>
+        				<label>Stockage</label>
+        				<input type="text" name="">
+        			</div>
+        			<div>
+        				<label>Processeur</label>
+        				<input type="text" name="">
+        			</div>
+        			<div>
+        				<label>Carte Graphique</label>
+        				<input type="text" name="">
+        			</div>
+        			<div>
+        				<label>Mémoire</label>
+        				<input type="text" name="">
+        			</div>
+        			<div>
+        				<label>Connexion</label>
+        				<input type="text" name="">
+        			</div>
+        		</div>
+        	</section>
+        	<section>
+        		<button id="save">Enregistrer</button>
+        	</section>
         </main>
-        <script src="client.js"></script>
-    </body>
+        <script src=".js"></script>
+	</body>
 </html>
