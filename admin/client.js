@@ -32,7 +32,7 @@ function createContent(row) {
   // lien vers l'article selon l'id
   //link.href = `article.html?id=${row.id}`;
   div.className = 'article';
-  img.src = "../image/news/news1.png";
+  img.src = '../image/news/news1.png';
   div3.className = 'corps';
   title.innerHTML = row.title;
   content.innerHTML = row.content;
