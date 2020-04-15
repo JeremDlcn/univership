@@ -90,13 +90,95 @@ nav {
 main {
 	height: 100%;
 	width: 80vw;
-	padding: 0 15vw;
+	padding: 0 12vw;
 }
 
 
 h1 {
 	margin: 2rem 0;
 	font-size: 2.5rem;
+}
+
+/*--- Présentation / Modification ---*/
+#modify {
+	display: grid;
+	grid-template-rows: 20% 70% 10%;
+	grid-template-columns: 50% 50%;
+	padding: 0 7vw;
+}
+
+#modify h1 {
+	align-self: flex-start;
+}
+#modify section:last-of-type, #modify h1 {
+	grid-column: span 2;
+}
+
+select {
+	background-color: var(--medium-gray);
+	border: none;
+	width: 50%;
+	height: 2rem;
+}
+#manage-races {
+	padding-right: 3rem;
+}
+
+#manage-races textarea {
+	min-height: 5rem;
+}
+
+.races-stats {
+	display: grid;
+	grid-template-columns: repeat(3, 31%);
+	gap: 1rem;
+}
+.races-stats div{
+	display: flex;
+	flex-direction: column;
+}
+
+.specs-stats div {
+	display: flex;
+	flex-direction: column;
+}
+
+
+
+
+
+/* Prix */
+#prices-forumles, #feature-container {
+	display: grid;
+	grid-template-columns: repeat(4, 25%);
+}
+#feature-container {
+	display: flex;
+	flex-direction: column;
+}
+.feature {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.feature p {
+	margin: .5rem 0;
+}
+.formule-title {
+	font-size: 1.5rem;
+}
+
+.price-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 2rem 0;
+}
+
+.price-container input {
+	width: 20%;
+	font-size: 1.2rem;
+	margin-right: .3rem;
 }
 
 
@@ -232,6 +314,62 @@ figcaption {
 .tools a:last-child {
 	color: red;
 }
+
+
+
+/* FAQ */
+.question {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin: .5rem 0;
+}
+
+.edit img, .delete img{
+	width: 1rem;
+	margin: 0 .7rem;
+}
+
+.faq-edit {
+	margin-top: 2rem;
+}
+
+#faq-title {
+	margin-bottom: 2rem;
+}
+
+#faq-text {
+	min-height: 8rem;
+	margin-bottom: 4rem;
+}
+
+/* Bug Report */
+.bug {
+	background-color: var(--medium-gray);
+	padding: 1.5rem 2rem;
+}
+
+.bug div {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	margin-bottom: 1rem;
+}
+.bug-name{
+	font-weight: 900;	
+	font-size: 1.2rem;
+}
+.bug-date {
+	margin: 0 1rem;
+	opacity: .7;
+}
+.bug-type {
+	margin-left: auto;
+	font-weight: bold;	
+}
+
+
+
 
 @media screen and (max-width: 800px) {
 	main {
