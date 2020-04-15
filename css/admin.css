@@ -254,10 +254,10 @@ main > section > a {
 
 .article {
 	background-color: var(--medium-gray);
-	display: flex;
-	flex-direction: row;
+	display: grid;
+	grid-template-columns: 11rem 1fr 7rem;
 	padding: 2rem;
-
+	margin: 2rem 0;
 }
 
 .article > div > img {
