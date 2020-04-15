@@ -29,11 +29,11 @@ app.get('/list', (req, res) =>{
 //Récupérer un article spécifique
 app.get('/article/:id', (req, res) =>{
 	let index = Number(req.params.id);
-	db.each("SELECT * FROM article", [index], (err,row)=>{
+	db.each("SELECT * FROM article WHERE id = ?", [index], (err,row)=>{
 		if (err) {
 			console.log(err);
 		} else {
-			res.json(row.nom);
+			res.json(row);
 		}
 	});
 })
@@ -42,9 +42,9 @@ app.get('/article/:id', (req, res) =>{
 //création d'un article
 app.post('/create', (req, res)=> {
 	const corps = req.body;
-
+	const date = '25/06/2019'
 	// Ajouté l'article dans la table "article"
-	db.run("INSERT INTO article (title, category, content, date, img, visibility) VALUES(?,?,?,?,?,?)", [corps.title, corps.category, corps.content, corps.date, corps.img, corps.visibility]);
+	db.run("INSERT INTO article (title, category, content, date, img, visibility) VALUES(?,?,?,?,?,?)", [corps.title, corps.category, corps.content, date, corps.img, corps.visibility]);
 	res.send('ok');
 });
 

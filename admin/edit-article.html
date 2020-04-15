@@ -1,75 +1,91 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet">
-        <meta name="theme-color" content="#333333"/>
-        <link rel="icon" type="icon/png" href="../image/favicon.png"/>
-        <link rel="stylesheet" href="../css/admin.css">
-        <link rel="stylesheet" href="../css/header.css">
-        <link rel="stylesheet" href="../css/footer.css">
-        <title>Edit Article - Admin</title>
-    </head>
-    <body>
-       <nav>
-            <section class="heading">
-                <img src="../image/logo.png" alt="">
-            </section>
-            <section class="menu">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet">
+    <meta name="theme-color" content="#333333" />
+    <link rel="icon" type="icon/png" href="../image/favicon.png" />
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <title>Edit Article - Admin</title>
+</head>
+
+<body>
+    <nav>
+        <section class="heading">
+            <img src="../image/logo.png" alt="">
+        </section>
+        <section class="menu">
+            <div>
+                <img src="../image/icon/person.png" alt="">
+                <p>Auriane (Administrateur)</p>
+            </div>
+            <a href="modify.html">
+                <img src="../image/icon/presentation.png" alt="">
+                <p>Présentation</p>
+            </a>
+            <a href="manage-price.html">
+                <img src="../image/icon/prices.png" alt="">
+                <p>Prix</p>
+            </a>
+            <a href="article.html">
+                <img src="../image/icon/article.png" alt="">
+                <p>Articles</p>
+            </a>
+            <a href="manage-faq.html">
+                <img src="../image/icon/question.png" alt="">
+                <p>FAQ</p>
+            </a>
+            <a href="bug-report.html">
+                <img src="../image/icon/bug-tools.png" alt="">
+                <p>Bug Report</p>
+            </a>
+        </section>
+        <section class="deconnect">
+            <img src="../image/icon/logout.png" alt="">
+            <p>Se déconnecter</p>
+        </section>
+    </nav>
+    <main>
+        <h1>Création d'article</h1>
+        <section>
+            <div>
+                <h2>Titre de l'article</h2>
+                <input type="text" name="title" id="article-title">
+            </div>
+            <div id="category">
                 <div>
-                    <img src="../image/icon/person.png" alt="">
-                    <p>Auriane (Administrateur)</p>
-                </div>
-                <a href="modify.html">
-                    <img src="../image/icon/presentation.png" alt="">
-                    <p>Présentation</p>
-                </a>
-                <a href="manage-price.html">
-                    <img src="../image/icon/prices.png" alt="">
-                    <p>Prix</p>
-                </a>
-                <a href="article.html">
-                    <img src="../image/icon/article.png" alt="">
-                    <p>Articles</p>
-                </a>
-                <a href="manage-faq.html">
-                    <img src="../image/icon/question.png" alt="">
-                    <p>FAQ</p>
-                </a>
-                <a href="bug-report.html">
-                    <img src="../image/icon/bug-tools.png" alt="">
-                    <p>Bug Report</p>
-                </a>
-            </section>
-            <section class="deconnect">
-                <img src="../image/icon/logout.png" alt="">
-                <p>Se déconnecter</p>
-            </section>
-        </nav>
-        <main>
-            <h1>Création d'article</h1>
-            <section>
-                <div>
-                    <h2>Titre de l'article</h2>
-                    <input type="text" name="title">
-                </div>
-                <div id="category">                
                     <h2>Catégorie de l'article</h2>
-                    <select>
+                    <select id="article-category">
                         <option value="maj">Mise à Jour</option>
                         <option value="encours">En cours de développement</option>
                         <option value="news">News</option>
                     </select>
                 </div>
-                <div>  
-                    <h2>Contenu de l'article</h2>
-                    <textarea placeholder="Tapez du texte ici"></textarea>
+                <div class="post-art">
+                    <h2>Miniature de l'article</h2>
+                    <input type="text" placeholder="https://" id="article-poster">
                 </div>
-                <a href="article.html">
-                    <button id="save"><img src="../image/icon/save.png">Enregistrer</button>
-                </a>
-            </section>
-        </main>
-    </body>
+                <div>
+                    <h2>Visibilité de l'article</h2>
+                    <select id="article-visibility">
+                        <option value="public">Public</option>
+                        <option value="private">Privé</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <h2>Contenu de l'article</h2>
+                <textarea placeholder="Tapez du texte ici" id="article-text"></textarea>
+            </div>
+            <a href="article.html">
+                <button id="save"><img src="../image/icon/save.png">Enregistrer</button>
+            </a>
+        </section>
+    </main>
+</body>
+
 </html>

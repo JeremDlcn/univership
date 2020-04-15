@@ -207,6 +207,9 @@ input {
 
 #category {
 	align-self: flex-start;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
 }
 
 #category select {
@@ -227,6 +230,9 @@ textarea {
 
 main > section > a {
 	align-self: center;
+}
+.post-art {
+	margin: 0 4rem;
 }
 #save, #write {
 	background-color: var(--purple);
