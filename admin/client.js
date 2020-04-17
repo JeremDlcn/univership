@@ -20,6 +20,7 @@ function createContent(row) {
   let img = document.createElement('img');
   let div3 = document.createElement('div');
   let title = document.createElement('h3');
+  let date = document.createElement('p');
   let content = document.createElement('p');
   let div4 = document.createElement('div');
   let figure = document.createElement('figure');
@@ -29,12 +30,13 @@ function createContent(row) {
   let edit = document.createElement('a');
   let remove = document.createElement('a');
   
-  // lien vers l'article selon l'id
+  //lien vers l'article selon l'id
   //link.href = `article.html?id=${row.id}`;
   div.className = 'article';
   img.src = '../image/news/news1.png';
   div3.className = 'corps';
   title.innerHTML = row.title;
+  date.innerHTML = row.date;
   content.innerHTML = row.content;
   div4.className = 'tools';
   figcaption.textContent = row.visibility;
@@ -49,6 +51,7 @@ function createContent(row) {
   div.appendChild(div4);
   div2.appendChild(img);
   div3.appendChild(title);
+  div3.appendChild(date);
   div3.appendChild(content);
   div4.appendChild(figure);
   div4.appendChild(div5);
