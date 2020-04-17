@@ -13,7 +13,7 @@ fetch(`http://localhost:3000/list`, {
 
 //Création de la liste d'articles
 function createContent(row) {
-  
+
   let link = document.createElement('a');
   let div = document.createElement('div');
   let div2 = document.createElement('div');
@@ -60,31 +60,6 @@ function createContent(row) {
   document.querySelector('article').appendChild(div);
 }
 
-/*
-//Changement de vue d'affichage de la liste d'articles
-document.querySelector('#grid').addEventListener('click', ()=>{
-  let len = document.querySelectorAll('.articles');
-  document.querySelector('article').classList.toggle('grid');
-
-  for (let i = 0; i < len.length; i++){
-    document.querySelectorAll('.articles')[i].classList.toggle('grid');
-    document.querySelectorAll('main h2')[i].classList.toggle('grid');
-    document.querySelectorAll('main > article p')[i].classList.toggle('grid');
-    document.querySelectorAll('main article img')[i].classList.toggle('grid');
-    document.querySelectorAll('article a')[i].classList.toggle('grid');
-  }
-});
-*/
-
-// Animation du Header au scroll
-window.onscroll = ()=>{
-  if (document.documentElement.scrollTop > 10) {
-    document.querySelector("header").classList.add('reduce');
-    document.querySelector("header h1").classList.add('reduce');
-    document.querySelector("header p").classList.add('reduce');
-    setTimeout(()=>{
-      document.querySelector('header').style.position = "static";
-    }, 200)
-  }
+function editContent(row){
+  
 }
-
