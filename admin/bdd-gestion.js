@@ -8,11 +8,7 @@ let db = new sq.Database("./database.db", err => {
 });
 
 
-
 // create();
-
-
-
 
 
 // for (let i = 1; i <= 5; i++){
@@ -20,9 +16,7 @@ let db = new sq.Database("./database.db", err => {
 // }
 
 
-
 view();
-
 
 
 function create() {

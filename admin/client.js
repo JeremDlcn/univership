@@ -13,7 +13,6 @@ fetch(`http://localhost:3000/list`, {
 
 //Création de la liste d'articles
 function createContent(row) {
-
   let link = document.createElement('a');
   let div = document.createElement('div');
   let div2 = document.createElement('div');
@@ -44,6 +43,8 @@ function createContent(row) {
   img2.className = 'visibility';
   edit.textContent = 'Modifier';
   remove.textContent = 'Supprimer';
+  remove.id = 'remove';
+  //remove.href = '';
   
   //link.appendChild(div);
   div.appendChild(div2);
@@ -63,6 +64,8 @@ function createContent(row) {
   document.querySelector('article').appendChild(div);
 }
 
-function editContent(row){
-  
-}
+document.querySelector('#remove').addEventListener('click', ()=>{
+  fetch(`http://localhost:3000/delete/:id`, {
+    method: "DELETE"
+  })
+})

@@ -42,7 +42,7 @@ app.get('/article/:id', (req, res) =>{
 //création d'un article
 app.post('/create', (req, res)=> {
 	const corps = req.body;
-	const date = '25/06/2019'
+	//const date = '25/06/2019'
 	// Ajouté l'article dans la table "article"
 	db.run("INSERT INTO article (title, category, content, date, img, visibility) VALUES(?,?,?,?,?,?)", [corps.title, corps.category, corps.content, date, corps.img, corps.visibility]);
 	res.send('ok');
@@ -56,7 +56,6 @@ app.post('/edit/:id', (req, res)=> {
 
 	// Mettre à jour la ligne lié à l'article sélectionné avec son id
 	db.run("UPDATE article SET title = ?, category = ?, content = ?, date = ?, img = ?, visibility = ? WHERE id = ?", [corps.title, corps.category, corps.content, corps.date, corps.img, corps.visibility, index]);
-
 	res.send('ok');
 });
 
