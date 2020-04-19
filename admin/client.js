@@ -43,7 +43,7 @@ function createContent(row) {
   img2.className = 'visibility';
   edit.textContent = 'Modifier';
   remove.textContent = 'Supprimer';
-  remove.id = 'remove';
+  remove.className = 'remove';
   remove.href = 'article.html';
   
   //link.appendChild(div);
@@ -64,8 +64,11 @@ function createContent(row) {
   document.querySelector('article').appendChild(div);
 }
 
-document.querySelector('#remove').addEventListener('click', ()=>{
+const arrayRemove = document.querySelectorAll('.remove');
+for (let i = 0; i < arrayRemove.length; i++){
+	arrayRemove[i].addEventListener('click', ()=>{
   fetch(`http://localhost:3000/delete/:id`, {
     method: "DELETE"
   })
 })
+}
