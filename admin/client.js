@@ -44,7 +44,7 @@ function createContent(row) {
   edit.textContent = 'Modifier';
   remove.textContent = 'Supprimer';
   remove.id = 'remove';
-  //remove.href = '';
+  remove.href = 'article.html';
   
   //link.appendChild(div);
   div.appendChild(div2);
