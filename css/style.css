@@ -79,6 +79,12 @@ header img {
 	padding: .5rem 1rem; 
 	margin-left: 1rem;
 	color: var(--main-font);
+	cursor: pointer;
+	transition-duration: .2s;
+}
+
+.rgpd button:active {
+	transform: scale(.95);
 }
 
 .validRGPD {

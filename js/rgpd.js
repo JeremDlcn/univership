@@ -1,16 +1,3 @@
-const rgpddd = `<div class="rgpd">
-  <p>
-  </p>
-  <div>
-    <a href="">En savoir plus</a>
-    <div>
-      <button class="deniedRGPD">Refuser</button>
-      <button class="validRGPD">Accepter</button>
-    </div>
-  </div>
-</div>
-`
-
 let rgpd = document.createElement('div');
 let textrgpd = document.createElement('p');
 let actionrgpd = document.createElement('div');
@@ -22,7 +9,7 @@ let validrgpd = document.createElement('button');
 
 rgpd.className = "rgpd";
 textrgpd.innerHTML = "Le site utilise récupère les données du traffic mais pas les données personelles. En naviguant sur se site vous accepter de nous aidés à améliorer notre site en nous partageant vos données de traffic."
-linkrgpd.href = "/conditions.html"
+linkrgpd.href = "conditions.html"
 linkrgpd.innerHTML = "En savoir plus"
 deniedrgpd.className = "deniedRGPD"
 deniedrgpd.innerHTML = "Refuser"
@@ -37,3 +24,20 @@ actionrgpd.appendChild(buttonsrgpd);
 rgpd.appendChild(textrgpd);
 rgpd.appendChild(actionrgpd);
 document.querySelector('body').append(rgpd);
+
+
+
+
+document.querySelector('.validRGPD').addEventListener('click', ()=>{
+	event.target.parentElement.parentElement.parentElement.remove();
+});
+
+document.querySelector('.deniedRGPD').addEventListener('click', ()=>{
+	if (history.length > 1) {
+		window.history.back();	
+	}
+	else {
+		window.location.href = "https://www.google.com/";	
+	}
+	
+});	
