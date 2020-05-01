@@ -178,10 +178,6 @@ main:not(#help):not(#download) {
 }
 
 
-main:not(#help):not(#faq) {
-	align-items: center;
-}
-
 #faq {
 	height: auto;
 }
