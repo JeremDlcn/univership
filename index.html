@@ -42,7 +42,7 @@
 						<div class="spade"></div>
 						<div class="spade"></div>
 					</div>
-					<button>PLAY</button>
+					<a href="download.html"><button class="play-button">PLAY</button></a>
 				</div>
 				<img src="image/shade1.png" class="shade" alt="">
 			</section>
@@ -52,7 +52,7 @@
 					<p>Univership est un jeu futuriste se passant en l'an 2150, en open world regroupant PVP/PVE ainsi qu'un système de collecte de ressources et de craft.<br><br>Les humains ayant élus domicile sur Nova Elämä dans le système Nammu, ils ont rencontrés d'autres espèces intelligentes tel que les Rakao's, les Nefraans, les Scraps et les Naukas.</p>
 				</div>
 				<div>
-					<iframe width="640" height="360" src="https://www.youtube.com/embed/uqoxRcP5kbo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+<!-- 					<iframe width="640" height="360" src="https://www.youtube.com/embed/uqoxRcP5kbo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe> -->
 				</div>
 			</section>
 			<section id="feature">
@@ -106,19 +106,19 @@
 				<section class="infosSpecies">
 					<div>
 						<div class="infosText">
-							<h3>Humains</h3>
-							<p>Plus évolués que les humaines de 2020, ils ont développé
+							<h3 class="r-name">Humains</h3>
+							<p class="r-desc">Plus évolués que les humaines de 2020, ils ont développé
 							des technologies pouvant améliorer leurs capacités physiques.
 							Ils sont désormais plus forts, plus rapides et plus intelligents que
 							leurs ancêtres.</p>
 						</div>
 						<div>
 							<h4>Vitesse</h4>
-							<progress value="50" max="100"></progress>
+							<progress value="50" max="100" class="r-speed"></progress>
 							<h4>Puissance</h4>
-							<progress value="20" max="100"></progress>
+							<progress value="20" max="100" class="r-power"></progress>
 							<h4>Précision</h4>
-							<progress value="42" max="100"></progress>
+							<progress value="42" max="100" class="r-accuracy"></progress>
 						</div>
 					</div>
 				</section>
@@ -147,5 +147,6 @@
 			</footer>
 			<script src="js/animation.js"></script>
 			<script src="js/navbar.js"></script>
+			<script src="js/races.js"></script>
 	</body>
 </html>

@@ -25,6 +25,7 @@ body {
 	color: var(--main-font);
 	font-family: 'Exo', sans-serif;
 	border: 0;
+	overflow-x: hidden;
 }
 
 
@@ -52,7 +53,9 @@ header img {
 	width: 50px!important;
 }
 
-
+.play-button {
+	cursor: pointer;
+}
 
 #main button, #playing button {
 	background-color: var(--main-color);
@@ -365,7 +368,6 @@ header img {
 	width: 400px;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
 }
 
 .infosText p{
@@ -404,6 +406,7 @@ progress::-webkit-progress-bar {
 
 progress::-webkit-progress-value {
 	background: var(--purple);
+	transition-duration: .5s;
 }
 progress::-ms-fill {
 	background-color: var(--purple);	
