@@ -59,4 +59,5 @@ for (let i = 0; i < detect.length; i++){
 		document.querySelector('.r-power').value = raceData[i].spec.power;
 		document.querySelector('.r-accuracy').value = raceData[i].spec.accuracy;
 	});
+	detect[i].setAttribute('data-before', raceData[i].name);
 }

@@ -164,6 +164,13 @@ a:hover {
 
 
 /*Conditions utilisation*/
+.mentions, .legal-text {
+	padding-bottom: 8rem;
+}
+.mentions h2 {
+	margin-top: 4rem;
+	margin-bottom: 2rem;
+}
 
 main:not(#help):not(#download) {
 	padding-left: 17vw;
