@@ -63,7 +63,9 @@ header img {
 	right: 1rem;
 	background-color: var(--main-color);
 	width: 30vw;
+	min-width: 400px;
 	padding: 1.5rem;
+	z-index: 99;
 }
 .rgpd a {
 	color: var(--purple);
@@ -621,5 +623,8 @@ progress::-ms-fill {
 		position: absolute;
 		bottom: -3rem;
 		left: 0;
+	}
+	.rgpd {
+		min-width: 95%;
 	}
 }

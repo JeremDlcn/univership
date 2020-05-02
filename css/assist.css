@@ -470,7 +470,10 @@ progress::-ms-fill {
 
 
 @media screen and (max-width: 800px) {
-	
+	#specs-array {
+		grid-template-columns: 50% 30% 30%;
+		font-size: 1rem;
+	}
 	#download {
 		flex-direction: column!important;
 		height: auto;
@@ -521,7 +524,9 @@ progress::-ms-fill {
 
 
 @media screen and (max-width: 600px) {
-
+	#specs-array {
+		font-size: .7rem;
+	}
 	#help > div  {
 		flex-direction: column;
 		align-items: center;
