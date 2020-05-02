@@ -337,6 +337,7 @@ progress::-ms-fill {
 	font-size: 1.4rem;
 	gap: 1rem;
 	margin-right: 5rem;
+	align-items: center;
 }
 .specs-category div{
 	display: flex;
