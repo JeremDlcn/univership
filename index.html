@@ -1,153 +1,177 @@
 <!DOCTYPE html>
 <html lang="fr">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet">
-		<meta name="theme-color" content="#333333"/>
-		<link rel="icon" type="icon/png" href="image/favicon.png"/>
-		<link rel="stylesheet" href="css/style.css">
-		<link rel="stylesheet" href="css/header.css">
-		<link rel="stylesheet" href="css/footer.css">
-		<title>Univership</title>
-	</head>
-	<body>
-		<header>
-			<img src="image/solo.png" alt="logo">
-			<div>
+
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-148929840-2"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+		gtag('config', 'UA-148929840-2');
+	</script>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet">
+	<meta name="theme-color" content="#333333" />
+	<link rel="icon" type="icon/png" href="image/favicon.png" />
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/header.css">
+	<link rel="stylesheet" href="css/footer.css">
+	<title>Univership</title>
+</head>
+
+<body>
+	<header>
+		<a href="index.html">
+			<img src="image/solo.png">
+		</a>
+		<div>
+			<a href="index.html">Accueil</a>
+			<a href="subscription.html">Abonnement</a>
+			<a href="news.html">Mise à jour</a>
+			<a href="help.html">Assistance</a>
+			<a href="download.html">Téléchargement</a>
+		</div>
+		<nav class="navbar">
+			<div class="banner"></div>
+			<button id="burger"><img src="image/burger.png" alt="accéder au menu"></button>
+			<div id="dropdown">
 				<a href="index.html">Accueil</a>
 				<a href="subscription.html">Abonnement</a>
 				<a href="news.html">Mise à jour</a>
 				<a href="help.html">Assistance</a>
 				<a href="download.html">Téléchargement</a>
 			</div>
-			<nav class="navbar">
-				<div class="banner"></div>
-				<button id="burger"><img src="image/burger.png" alt="accéder au menu"></button>
-				<div id="dropdown">
-					<a href="index.html">Accueil</a>
-					<a href="subscription.html">Abonnement</a>
-					<a href="news.html">Mise à jour</a>
-					<a href="help.html">Assistance</a>
-					<a href="download.html">Téléchargement</a>
+		</nav>
+	</header>
+	<main>
+		<section id="main">
+			<div>
+				<div class="containSpeed">
+					<h1><img src="image/title.png" alt="title"></h1>
+					<div class="spade"></div>
+					<div class="spade"></div>
+					<div class="spade"></div>
 				</div>
-			</nav>
-		</header>
-		<main>
-			<section id="main">
+				<a href="download.html"><button class="play-button">PLAY</button></a>
+			</div>
+			<img src="image/shade1.png" class="shade" alt="">
+		</section>
+		<section id="game">
+			<div>
+				<h2>Présentation du jeu</h2>
+				<p>Univership est un jeu futuriste se passant en l'an 2150, en open world regroupant PVP/PVE ainsi qu'un
+					système de collecte de ressources et de craft.<br><br>Les humains ayant élus domicile sur Nova Elämä
+					dans le système Nammu, ils ont rencontrés d'autres espèces intelligentes tel que les Rakao's, les
+					Nefraans, les Scraps et les Naukas.</p>
+			</div>
+			<div>
+				<iframe width="640" height="360" src="https://www.youtube.com/embed/uqoxRcP5kbo" frameborder="0"
+					allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+					allowfullscreen=""></iframe>
+			</div>
+		</section>
+		<section id="feature">
+			<img src="image/shade2.png" class="shadeT" alt="">
+			<section>
 				<div>
-					<div class="containSpeed">
-						<h1><img src="image/title.png" alt="title"></h1>
-						<div class="spade"></div>
-						<div class="spade"></div>
-						<div class="spade"></div>
+					<div>
+						<h2>Combat d'alliance</h2>
+						<p>Prenez part à la bataille entre alliances, qui fait rage depuis des siècles dans cette
+							univers en expansion</p>
 					</div>
-					<a href="download.html"><button class="play-button">PLAY</button></a>
-				</div>
-				<img src="image/shade1.png" class="shade" alt="">
-			</section>
-			<section id="game">
-				<div>
-					<h2>Présentation du jeu</h2>
-					<p>Univership est un jeu futuriste se passant en l'an 2150, en open world regroupant PVP/PVE ainsi qu'un système de collecte de ressources et de craft.<br><br>Les humains ayant élus domicile sur Nova Elämä dans le système Nammu, ils ont rencontrés d'autres espèces intelligentes tel que les Rakao's, les Nefraans, les Scraps et les Naukas.</p>
 				</div>
 				<div>
-					<iframe width="640" height="360" src="https://www.youtube.com/embed/uqoxRcP5kbo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+					<img src="image/fight.png" alt="Duel">
 				</div>
 			</section>
-			<section id="feature">
-				<img src="image/shade2.png" class="shadeT" alt="">
-				<section>
-					<div>
-						<div>
-							<h2>Combat d'alliance</h2>
-							<p>Prenez part à la bataille entre alliances, qui fait rage depuis des siècles dans cette univers en expansion</p>
-						</div>
-					</div>
-					<div>
-						<img src="image/fight.png" alt="Duel">
-					</div>
-				</section>
-				<section>
-					<div>
-						<img src="image/spaceship.png" alt="Vaisseau Spatial">
-					</div>
-					<div>
-						<h2>Coopération en vaisseau</h2>
-						<p>La coopération peut-être votre meilleur atout, plus nombreux vous êtes, plus gros seront vos vaisseaux</p>
-					</div>
-				</section>
-				<img src="image/shade4.png" class="shadeMM" alt="">
+			<section>
+				<div>
+					<img src="image/spaceship.png" alt="Vaisseau Spatial">
+				</div>
+				<div>
+					<h2>Coopération en vaisseau</h2>
+					<p>La coopération peut-être votre meilleur atout, plus nombreux vous êtes, plus gros seront vos
+						vaisseaux</p>
+				</div>
 			</section>
-			<section id="species">
-				<h2>Races</h2>
-				<section id="select">
-					<div>
-						<div class="tweak"></div>
-						<img src="image/character/roof.png" alt="">
-					</div>
-					<div>
-						<div class="tweak"></div>
-						<img src="image/character/spaced.png" alt="">
-					</div>
-					<div>
-						<div class="tweak"></div>
-						<img src="image/character/human.png" alt="">
-					</div>
-					<div>
-						<div class="tweak"></div>
-						<img src="image/character/armed.png" alt="">
-					</div>
-					<div>
-						<div class="tweak"></div>
-						<img src="image/character/long.png" alt="">
-					</div>
-				</section>
-				<section class="infosSpecies">
-					<div>
-						<div class="infosText">
-							<h3 class="r-name">Humains</h3>
-							<p class="r-desc">Plus évolués que les humaines de 2020, ils ont développé
+			<img src="image/shade4.png" class="shadeMM" alt="">
+		</section>
+		<section id="species">
+			<h2>Races</h2>
+			<section id="select">
+				<div>
+					<div class="tweak"></div>
+					<img src="image/character/roof.png" alt="">
+				</div>
+				<div>
+					<div class="tweak"></div>
+					<img src="image/character/spaced.png" alt="">
+				</div>
+				<div>
+					<div class="tweak"></div>
+					<img src="image/character/human.png" alt="">
+				</div>
+				<div>
+					<div class="tweak"></div>
+					<img src="image/character/armed.png" alt="">
+				</div>
+				<div>
+					<div class="tweak"></div>
+					<img src="image/character/long.png" alt="">
+				</div>
+			</section>
+			<section class="infosSpecies">
+				<div>
+					<div class="infosText">
+						<h3 class="r-name">Humains</h3>
+						<p class="r-desc">Plus évolués que les humaines de 2020, ils ont développé
 							des technologies pouvant améliorer leurs capacités physiques.
 							Ils sont désormais plus forts, plus rapides et plus intelligents que
 							leurs ancêtres.</p>
-						</div>
-						<div>
-							<h4>Vitesse</h4>
-							<progress value="50" max="100" class="r-speed"></progress>
-							<h4>Puissance</h4>
-							<progress value="20" max="100" class="r-power"></progress>
-							<h4>Précision</h4>
-							<progress value="42" max="100" class="r-accuracy"></progress>
-						</div>
 					</div>
-				</section>
-				<img src="image/shade3.png" class="shadeM" alt="">
-			</section>
-			<section id="playing">
-				<h2>Combattre, Explorer</h2>
-				<h3>et découvrir les secrets de l'univers</h3>
-				<a href="download.html"><button class="play-button">Jouer dès maintenant</button></a>
-			</section>
-		</main>
-			<footer>
-				<div id="social">
-					<a href="https://twitter.com/univership_off?lang=fr&lang=f"><img src="image/social/twitter.png" alt="Twitter"></a>
-					<a href="https://www.youtube.com/channel/UCtyd-Vh6b9155vsxjlaL9vQ?view_as=subscriber"><img src="image/social/youtube.png" alt="Youtube"></a>
-					<a href="https://www.facebook.com/Univership-Officiel-782682542091439/"><img src="image/social/fb.svg" alt="Facebook"></a>
-					<a href="https://www.twitch.tv/univership_officiel"><img src="image/social/twitch.png" alt="Twitch"></a>
-					<a href="https://www.instagram.com/univership_art/?hl=fr"><img src="image/social/insta.png" alt="Instagram"></a>
+					<div>
+						<h4>Vitesse</h4>
+						<progress value="50" max="100" class="r-speed"></progress>
+						<h4>Puissance</h4>
+						<progress value="20" max="100" class="r-power"></progress>
+						<h4>Précision</h4>
+						<progress value="42" max="100" class="r-accuracy"></progress>
+					</div>
 				</div>
-				<div>
-					<a href="aboutus.html">About Us</a>
-					<a href="faq.html">FAQ</a>
-					<a href="conditions.html">Conditions d'utilisation</a>
-					<a href="policy.html">Politique de confidentialité</a>
-				</div>
-			</footer>
-			<script src="js/animation.js"></script>
-			<script src="js/navbar.js"></script>
-			<script src="js/races.js"></script>
-			<script src="js/rgpd.js"></script>
-	</body>
+			</section>
+			<img src="image/shade3.png" class="shadeM" alt="">
+		</section>
+		<section id="playing">
+			<h2>Combattre, Explorer</h2>
+			<h3>et découvrir les secrets de l'univers</h3>
+			<a href="download.html"><button class="play-button">Jouer dès maintenant</button></a>
+		</section>
+	</main>
+	<footer>
+		<div id="social">
+			<a href="https://twitter.com/univership_off?lang=fr&lang=f"><img src="image/social/twitter.png"
+					alt="Twitter"></a>
+			<a href="https://www.youtube.com/channel/UCtyd-Vh6b9155vsxjlaL9vQ?view_as=subscriber"><img
+					src="image/social/youtube.png" alt="Youtube"></a>
+			<a href="https://www.facebook.com/Univership-Officiel-782682542091439/"><img src="image/social/fb.svg"
+					alt="Facebook"></a>
+			<a href="https://www.twitch.tv/univership_officiel"><img src="image/social/twitch.png" alt="Twitch"></a>
+			<a href="https://www.instagram.com/univership_art/?hl=fr"><img src="image/social/insta.png"
+					alt="Instagram"></a>
+		</div>
+		<div>
+			<a href="aboutus.html">About Us</a>
+			<a href="faq.html">FAQ</a>
+			<a href="conditions.html">Conditions d'utilisation</a>
+			<a href="policy.html">Politique de confidentialité</a>
+		</div>
+	</footer>
+	<script src="js/animation.js"></script>
+	<script src="js/navbar.js"></script>
+	<script src="js/races.js"></script>
+	<script src="js/rgpd.js"></script>
+</body>
+
 </html>

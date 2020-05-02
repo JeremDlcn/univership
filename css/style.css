@@ -532,7 +532,7 @@ progress::-ms-fill {
 
 /*-----Mobile Large-----*/
 @media screen and (max-width: 600px) {
-	header > img {
+	header > a > img {
 		margin-top: 0!important;
 	}
 	#main {

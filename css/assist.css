@@ -584,7 +584,7 @@ progress::-ms-fill {
 	#connect header {
 		position: static!important;
 	}
-	#connect header > img {
+	#connect header > a > img {
 		position: static;
 		width: 150px;
 	}

@@ -1,32 +1,47 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet">
-        <meta name="theme-color" content="#333333"/>
-        <link rel="icon" type="icon/png" href="image/favicon.png"/>
-        <link rel="stylesheet" href="css/assist.css">
-        <link rel="stylesheet" href="css/header.css">
-        <link rel="stylesheet" href="css/footer.css">
-        <title>Connexion</title>
-    </head>
-    <body id="connect">
-        <header>
-            <img src="image/logo.png">
-            <button>
-                <img src="image/icon/home.png"/>Return to Home
-            </button>
-        </header>
-        <main>
-            <h1>Connexion</h1>
-            <div>
-                <div class="error"><p>Mot de passe inconnu</p></div>
-                <div class="bend"><input type="text" placeholder="Identifiant"></div>
-                <div class="bend"><input type="password" name="password" placeholder="Mot de passe"></div>
-                <button>Connexion</button>
-            </div>
 
-        </main>
-    </body>
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148929840-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-148929840-2');
+    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet">
+    <meta name="theme-color" content="#333333" />
+    <link rel="icon" type="icon/png" href="image/favicon.png" />
+    <link rel="stylesheet" href="css/assist.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <title>Connexion</title>
+</head>
+
+<body id="connect">
+    <header>
+        <a href="index.html">
+            <img src="image/logo.png">
+        </a>
+        <button>
+            <img src="image/icon/home.png" />Return to Home
+        </button>
+    </header>
+    <main>
+        <h1>Connexion</h1>
+        <div>
+            <div class="error">
+                <p>Mot de passe inconnu</p>
+            </div>
+            <div class="bend"><input type="text" placeholder="Identifiant"></div>
+            <div class="bend"><input type="password" name="password" placeholder="Mot de passe"></div>
+            <button>Connexion</button>
+        </div>
+
+    </main>
+</body>
+
 </html>

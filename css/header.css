@@ -8,7 +8,7 @@ header {
 	z-index: 5;
 }
 
-header > img {
+header > a > img {
 	margin: 10px 50px;
 	width: 150px;
 }
@@ -100,7 +100,7 @@ header a{
 		top: 0;
 	}
 
-	header > img {
+	header > a > img {
 		position: absolute;
 		top: 20%;
 		left: 0;
@@ -113,7 +113,7 @@ header a{
 		display: none;
 	}
 
-	header a {
+	header div a {
 		padding: 1rem;
 	}
 
