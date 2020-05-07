@@ -5,7 +5,7 @@ fetch(`http://localhost:3000/list`, {
 })
   .then(r => r.json())
   .then(data => {
-    for (let i = 0; i < data.length; i++){
+    for (let i = 0; i < data.length; i++) {
       createContent(data[i]);
     }
   });
@@ -28,7 +28,7 @@ function createContent(row) {
   let div5 = document.createElement('div');
   let edit = document.createElement('a');
   let remove = document.createElement('a');
-  
+
   //lien vers l'article selon l'id
   //link.href = `article.html?id=${row.id}`;
   div.className = 'article';
@@ -45,7 +45,7 @@ function createContent(row) {
   remove.textContent = 'Supprimer';
   remove.className = 'remove';
   remove.href = 'article.html';
-  
+
   //link.appendChild(div);
   div.appendChild(div2);
   div.appendChild(div3);
@@ -65,10 +65,10 @@ function createContent(row) {
 }
 
 const arrayRemove = document.querySelectorAll('.remove');
-for (let i = 0; i < arrayRemove.length; i++){
-	arrayRemove[i].addEventListener('click', ()=>{
-  fetch(`http://localhost:3000/delete/:id`, {
-    method: "DELETE"
+for (let i = 0; i < arrayRemove.length; i++) {
+  arrayRemove[i].addEventListener('click', () => {
+    fetch(`http://localhost:3000/delete/:id`, {
+      method: "DELETE"
+    })
   })
-})
 }
