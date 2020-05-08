@@ -311,14 +311,15 @@ figcaption {
 	flex-direction: column;
 }
 
-.tools a {
+.tools div p {
 	font-size: .8rem;
 	font-weight: 900;
 	color: var(--purple);
 	font-weight: 800;
+	cursor: pointer;
 }
-.tools a:last-child {
-	color: red;
+.remove {
+	color: red!important;
 }
 
 
@@ -406,7 +407,7 @@ figcaption {
 		align-self: flex-end;
 		margin: 1rem 2rem;
 	}
-	.tools a:last-child {
+	.remove {
 		margin-left: 2rem;
 	}
 	main h1{

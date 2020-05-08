@@ -1,6 +1,5 @@
-//On récupère les articles présents dans le JSON à travers le serveur puis on les envoie au ficher HTML
 // récupération des articles
-fetch(`http://localhost:3000/list`, {
+fetch(`https://univership.herokuapp.com/list`, {
   method: "GET"
 })
   .then(r => r.json())
@@ -8,7 +7,10 @@ fetch(`http://localhost:3000/list`, {
     for (let i = 0; i < data.length; i++) {
       createContent(data[i]);
     }
-  });
+  })
+  .then(()=>{
+  	del()
+  })
 
 
 //Création de la liste d'articles
@@ -26,12 +28,13 @@ function createContent(row) {
   let figcaption = document.createElement('figcaption');
   let img2 = document.createElement('img');
   let div5 = document.createElement('div');
-  let edit = document.createElement('a');
-  let remove = document.createElement('a');
+  let edit = document.createElement('p');
+  let remove = document.createElement('p');
 
   //lien vers l'article selon l'id
   //link.href = `article.html?id=${row.id}`;
   div.className = 'article';
+  div.setAttribute("nb", row.id);
   img.src = '../image/news/news1.png';
   div3.className = 'corps';
   title.innerHTML = row.title;
@@ -64,11 +67,16 @@ function createContent(row) {
   document.querySelector('article').appendChild(div);
 }
 
-const arrayRemove = document.querySelectorAll('.remove');
-for (let i = 0; i < arrayRemove.length; i++) {
-  arrayRemove[i].addEventListener('click', () => {
-    fetch(`http://localhost:3000/delete/:id`, {
-      method: "DELETE"
-    })
-  })
+
+function del() {
+	const arrayRemove = document.querySelectorAll('.remove');
+	for (let i = 0; i < arrayRemove.length; i++) {
+		const art = arrayRemove[i].parentElement.parentElement.parentElement
+	  	arrayRemove[i].addEventListener('click', () => {
+	    	fetch(`https://univership.herokuapp.com/delete/${art.getAttribute("nb")}`, {
+	      		method: "DELETE"
+	    	})
+	    	art.remove();
+	  	})
+	}
 }
