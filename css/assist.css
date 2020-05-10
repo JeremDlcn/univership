@@ -172,6 +172,10 @@ a:hover {
 	margin-bottom: 2rem;
 }
 
+.mentions a {
+	display: flex;
+}
+
 main:not(#help):not(#download) {
 	padding-left: 17vw;
 	padding-right: 17vw;
