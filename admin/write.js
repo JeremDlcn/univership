@@ -9,30 +9,42 @@ Création d'article
 */
 
 
-
-
-
 //écrire le code ici
+//Réupération des infos de l'article
+document.querySelector('button').addEventListener('click', ()=>{
+	let title = document.querySelector('#article-title').value;
+	let category = document.querySelector('#article-category').value;
+	let content = document.querySelector('#article-text').value;
+    //let date = document.querySelector('dateArticle').value;
+    let img = document.querySelector('#article-poster').value;
+    let visibility = document.querySelector('#article-visibility').value;
+    
+	 
+    //remise à zéro des inputs
+    document.querySelector('#article-title').value = "";
+	document.querySelector('#article-category').value = "";
+	document.querySelector('#article-text').value = "";
+    //document.querySelector('dateArticle').value = "";
+    document.querySelector('#article-poster').value = "";
+    document.querySelector('#article-visibility').value = "";
 
+	
+	//envoi des informations du nouvelle article au serveur
+	fetch(`https://univership.herokuapp.com/create`, {		
+		method: 'POST',
+		headers: {'Content-Type': 'application/json'},
+		body: JSON.stringify({
+            title: title,
+            category: category,
+            content: content,
+            date: '25/05/20',
+            img: img,
+            visibility: visibility
+		})
+	})
+	.then(()=>window.location.href = 'article.html');
 
-
-
-
-//exemple du fetch pour envoyer les données à l'API
-//ce qui est à l'intérieur du "body: JSON.stringify" est indicatif c'est pas forcément la même chose que pour univership
-fetch(`https://univership.herokuapp.com/create`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-        poster: variable1,
-        title: variable2,
-        author: variable3,
-        content: varaible4
-    })
-})
-
-
-
+});
 
 
 
