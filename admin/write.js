@@ -20,7 +20,7 @@ Création d'article
 
 //exemple du fetch pour envoyer les données à l'API
 //ce qui est à l'intérieur du "body: JSON.stringify" est indicatif c'est pas forcément la même chose que pour univership
-fetch(`http://localhost:3000/create`, {
+fetch(`https://univership.herokuapp.com/create`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
