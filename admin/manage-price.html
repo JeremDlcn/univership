@@ -1,98 +1,103 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet">
-        <meta name="theme-color" content="#333333"/>
-        <link rel="icon" type="icon/png" href="../image/favicon.png"/>
-        <link rel="stylesheet" href="../css/admin.css">
-        <link rel="stylesheet" href="../css/header.css">
-        <link rel="stylesheet" href="../css/footer.css">
-		<title>Modification - Admin</title>
-	</head>
-	<body>
-      <nav>
-            <section class="heading">
-                <img src="../image/logo.png" alt="">
-            </section>
-            <section class="menu">
-                <div>
-                    <img src="../image/icon/person.png" alt="">
-                    <p>Auriane (Administrateur)</p>
-                </div>
-                <a href="modify.html">
-                    <img src="../image/icon/presentation.png" alt="">
-                    <p>Présentation</p>
-                </a>
-                <a href="manage-price.html">
-                    <img src="../image/icon/prices.png" alt="">
-                    <p>Prix</p>
-                </a>
-                <a href="article.html">
-                    <img src="../image/icon/article.png" alt="">
-                    <p>Articles</p>
-                </a>
-                <a href="manage-faq.html">
-                    <img src="../image/icon/question.png" alt="">
-                    <p>FAQ</p>
-                </a>
-                <a href="bug-report.html">
-                    <img src="../image/icon/bug-tools.png" alt="">
-                    <p>Bug Report</p>
-                </a>
-            </section>
-            <section class="deconnect">
-                <img src="../image/icon/logout.png" alt="">
-                <p>Se déconnecter</p>
-            </section>
-        </nav>
-        <main>
-        	<h1>Prix</h1>
-            <section id="prices-forumles">
-                <div><h2>Features</h2></div>
-                <div class="formule">
-                    <input type="text" value="Formule 1" class="formule-title">
-                    <div class="price-container">
-                        <input type="text" id="price" value="19">
-                        <p>€</p>
-                    </div>
-                </div>
-                <div class="formule">
-                    <input type="text" value="Formule 2" class="formule-title">
-                    <div class="price-container">
-                        <input type="text" id="price">
-                        <p>€</p>
-                    </div>
-                </div>
-                <div class="formule">
-                    <input type="text" value="Formule 3" class="formule-title">
-                    <div class="price-container">
-                        <input type="text" id="price" value="97">
-                        <p>€</p>
-                    </div>
 
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet">
+    <meta name="theme-color" content="#333333" />
+    <link rel="icon" type="icon/png" href="../image/favicon.png" />
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <title>Modification - Admin</title>
+</head>
+
+<body>
+    <nav>
+        <section class="heading">
+            <a href="../index.html"><img src="../image/logo.png" alt=""></a>
+        </section>
+        <section class="menu">
+            <div>
+                <img src="../image/icon/person.png" alt="">
+                <p>Auriane (Administrateur)</p>
+            </div>
+            <a href="modify.html">
+                <img src="../image/icon/presentation.png" alt="">
+                <p>Présentation</p>
+            </a>
+            <a href="manage-price.html">
+                <img src="../image/icon/prices.png" alt="">
+                <p>Prix</p>
+            </a>
+            <a href="article.html">
+                <img src="../image/icon/article.png" alt="">
+                <p>Articles</p>
+            </a>
+            <a href="manage-faq.html">
+                <img src="../image/icon/question.png" alt="">
+                <p>FAQ</p>
+            </a>
+            <a href="bug-report.html">
+                <img src="../image/icon/bug-tools.png" alt="">
+                <p>Bug Report</p>
+            </a>
+        </section>
+        <section class="deconnect">
+            <img src="../image/icon/logout.png" alt="">
+            <p>Se déconnecter</p>
+        </section>
+    </nav>
+    <main>
+        <h1>Prix</h1>
+        <section id="prices-forumles">
+            <div>
+                <h2>Features</h2>
+            </div>
+            <div class="formule">
+                <input type="text" value="Formule 1" class="formule-title">
+                <div class="price-container">
+                    <input type="text" id="price" value="19">
+                    <p>€</p>
                 </div>
-            </section>
-            <section id="feature-container">
-                <div class="feature">
-                    <p>Gestion du Vaisseau</p>
-                    <input type="checkbox" name="">
+            </div>
+            <div class="formule">
+                <input type="text" value="Formule 2" class="formule-title">
+                <div class="price-container">
+                    <input type="text" id="price">
+                    <p>€</p>
                 </div>
-                <div class="feature">
-                    <p>Gestion des ressources</p>
-                    <input type="checkbox" name="">
+            </div>
+            <div class="formule">
+                <input type="text" value="Formule 3" class="formule-title">
+                <div class="price-container">
+                    <input type="text" id="price" value="97">
+                    <p>€</p>
                 </div>
-                <div class="feature">
-                    <p>Découverte de 6 nouvelles planètes</p>
-                    <input type="checkbox" name="">
-                </div>
-                <div class="feature">
-                    <p>Gestion de l'énergie vitale des véhicule</p>
-                    <input type="checkbox" name="">
-                </div>
-            </section>
-        </main>
-        <script src=".js"></script>
-	</body>
+
+            </div>
+        </section>
+        <section id="feature-container">
+            <div class="feature">
+                <p>Gestion du Vaisseau</p>
+                <input type="checkbox" name="">
+            </div>
+            <div class="feature">
+                <p>Gestion des ressources</p>
+                <input type="checkbox" name="">
+            </div>
+            <div class="feature">
+                <p>Découverte de 6 nouvelles planètes</p>
+                <input type="checkbox" name="">
+            </div>
+            <div class="feature">
+                <p>Gestion de l'énergie vitale des véhicule</p>
+                <input type="checkbox" name="">
+            </div>
+        </section>
+    </main>
+    <script src=".js"></script>
+</body>
+
 </html>

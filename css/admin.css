@@ -119,6 +119,7 @@ select {
 	border: none;
 	width: 50%;
 	height: 2rem;
+	color: white;
 }
 #manage-races {
 	padding-right: 3rem;
@@ -264,6 +265,7 @@ main > section > a {
 	grid-template-columns: 11rem 1fr 7rem;
 	padding: 2rem;
 	margin: 2rem 0;
+	cursor: pointer;
 }
 
 .article > div > img {

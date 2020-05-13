@@ -1,79 +1,82 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet">
-        <meta name="theme-color" content="#333333"/>
-        <link rel="icon" type="icon/png" href="../image/favicon.png"/>
-        <link rel="stylesheet" href="../css/admin.css">
-        <link rel="stylesheet" href="../css/header.css">
-        <link rel="stylesheet" href="../css/footer.css">
-		<title>Modification - Admin</title>
-	</head>
-	<body>
-       <nav>
-            <section class="heading">
-                <img src="../image/logo.png" alt="">
-            </section>
-            <section class="menu">
-                <div>
-                    <img src="../image/icon/person.png" alt="">
-                    <p>Auriane (Administrateur)</p>
-                </div>
-                <a href="modify.html">
-                    <img src="../image/icon/presentation.png" alt="">
-                    <p>Présentation</p>
-                </a>
-                <a href="manage-price.html">
-                    <img src="../image/icon/prices.png" alt="">
-                    <p>Prix</p>
-                </a>
-                <a href="article.html">
-                    <img src="../image/icon/article.png" alt="">
-                    <p>Articles</p>
-                </a>
-                <a href="manage-faq.html">
-                    <img src="../image/icon/question.png" alt="">
-                    <p>FAQ</p>
-                </a>
-                <a href="bug-report.html">
-                    <img src="../image/icon/bug-tools.png" alt="">
-                    <p>Bug Report</p>
-                </a>
-            </section>
-            <section class="deconnect">
-                <img src="../image/icon/logout.png" alt="">
-                <p>Se déconnecter</p>
-            </section>
-        </nav>
-        <main>
-            <h1>FAQ</h1>
-            <section>
-                <div class="question">
-                    <p>Est ce que la lune est bleu quand la nuit est noir et que les lumières sont éteintes.</p>
-                    <div class="edit"><img src="../image/icon/edit.png" alt="edit"></div>
-                    <div class="delete"><img src="../image/icon/close.png" alt="delete"></div>
-                </div>   
-                <div class="question">
-                    <p>Est ce que la lune est bleu quand la nuit est noir et que les lumières sont éteintes.</p>
-                    <div class="edit"><img src="../image/icon/edit.png" alt="edit"></div>
-                    <div class="delete"><img src="../image/icon/close.png" alt="delete"></div>
-                </div>   
-                <div class="question">
-                    <p>Est ce que la lune est bleu quand la nuit est noir et que les lumières sont éteintes.</p>
-                    <div class="edit"><img src="../image/icon/edit.png" alt="edit"></div>
-                    <div class="delete"><img src="../image/icon/close.png" alt="delete"></div>
-                </div>    
-            </section>
-            <section class="faq-edit">
-                <label>Question</label>
-                <input type="text" id="faq-title">
-                <label>Réponses</label>
-                <textarea id="faq-text"></textarea>
-            </section>
-            <button id="save">Enregistrer</button>
-        </main>
-        <script src=".js"></script>
-	</body>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet">
+    <meta name="theme-color" content="#333333" />
+    <link rel="icon" type="icon/png" href="../image/favicon.png" />
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <title>Modification - Admin</title>
+</head>
+
+<body>
+    <nav>
+        <section class="heading">
+            <img src="../image/logo.png" alt="">
+        </section>
+        <section class="menu">
+            <div>
+                <img src="../image/icon/person.png" alt="">
+                <p>Auriane (Administrateur)</p>
+            </div>
+            <a href="modify.html">
+                <img src="../image/icon/presentation.png" alt="">
+                <p>Présentation</p>
+            </a>
+            <a href="manage-price.html">
+                <img src="../image/icon/prices.png" alt="">
+                <p>Prix</p>
+            </a>
+            <a href="article.html">
+                <img src="../image/icon/article.png" alt="">
+                <p>Articles</p>
+            </a>
+            <a href="manage-faq.html">
+                <img src="../image/icon/question.png" alt="">
+                <p>FAQ</p>
+            </a>
+            <a href="bug-report.html">
+                <img src="../image/icon/bug-tools.png" alt="">
+                <p>Bug Report</p>
+            </a>
+        </section>
+        <section class="deconnect">
+            <img src="../image/icon/logout.png" alt="">
+            <p>Se déconnecter</p>
+        </section>
+    </nav>
+    <main>
+        <h1>FAQ</h1>
+        <section>
+            <div class="question">
+                <p>Est ce que les planètes explorable contiennent toute des missions ?</p>
+                <div class="edit"><img src="../image/icon/edit.png" alt="edit"></div>
+                <div class="delete"><img src="../image/icon/close.png" alt="delete"></div>
+            </div>
+            <div class="question">
+                <p>Pourquoi seulement 5 vaisseauw disponibles ?</p>
+                <div class="edit"><img src="../image/icon/edit.png" alt="edit"></div>
+                <div class="delete"><img src="../image/icon/close.png" alt="delete"></div>
+            </div>
+            <div class="question">
+                <p>Est ce que le jeu propose une histoire en coopération ?</p>
+                <div class="edit"><img src="../image/icon/edit.png" alt="edit"></div>
+                <div class="delete"><img src="../image/icon/close.png" alt="delete"></div>
+            </div>
+        </section>
+        <section class="faq-edit">
+            <label>Question</label>
+            <input type="text" id="faq-title">
+            <label>Réponses</label>
+            <textarea id="faq-text"></textarea>
+        </section>
+        <button id="save">Enregistrer</button>
+    </main>
+    <script src=".js"></script>
+</body>
+
 </html>

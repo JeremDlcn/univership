@@ -1,112 +1,126 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet">
-        <meta name="theme-color" content="#333333"/>
-        <link rel="icon" type="icon/png" href="../image/favicon.png"/>
-        <link rel="stylesheet" href="../css/admin.css">
-        <link rel="stylesheet" href="../css/header.css">
-        <link rel="stylesheet" href="../css/footer.css">
-		<title>Modification - Admin</title>
-	</head>
-	<body>
-       <nav>
-            <section class="heading">
-                <img src="../image/logo.png" alt="">
-            </section>
-            <section class="menu">
-                <div>
-                    <img src="../image/icon/person.png" alt="">
-                    <p>Auriane (Administrateur)</p>
-                </div>
-                <a href="modify.html">
-                    <img src="../image/icon/presentation.png" alt="">
-                    <p>Présentation</p>
-                </a>
-                <a href="manage-price.html">
-                    <img src="../image/icon/prices.png" alt="">
-                    <p>Prix</p>
-                </a>
-                <a href="article.html">
-                    <img src="../image/icon/article.png" alt="">
-                    <p>Articles</p>
-                </a>
-                <a href="manage-faq.html">
-                    <img src="../image/icon/question.png" alt="">
-                    <p>FAQ</p>
-                </a>
-                <a href="bug-report.html">
-                    <img src="../image/icon/bug-tools.png" alt="">
-                    <p>Bug Report</p>
-                </a>
-            </section>
-            <section class="deconnect">
-                <img src="../image/icon/logout.png" alt="">
-                <p>Se déconnecter</p>
-            </section>
-        </nav>
-        <main id="modify">
-        	<h1>Modification</h1>
-        	<section id="manage-races">
-        		<h2>Races</h2>
-        		<div>
-	        		<label>Nom</label>
-	        		<select></select>	
-        		</div>
-        		<div>
-					<label>Description de la race</label>
-					<textarea></textarea>
-        		</div>
-        		<div class="races-stats">
-        			<div>
-        				<label>Vitesse</label>
-        				<input type="text" name="">
-        			</div>
-        			<div>
-        				<label>Puissance</label>
-        				<input type="text" name="">
-        			</div>
-        			<div>
-        				<label>Précision</label>
-        				<input type="text" name="">
-        			</div>
-        		</div>
-            </section>
-        	<section id="manage-specs">
-				<h2>Configuration</h2>
-        		<div>
-	        		<label>Types de configuration</label>
-	        		<select></select>	
-        		</div>
-        		<div class="specs-stats">
-        			<div>
-        				<label>Stockage</label>
-        				<input type="text" name="">
-        			</div>
-        			<div>
-        				<label>Processeur</label>
-        				<input type="text" name="">
-        			</div>
-        			<div>
-        				<label>Carte Graphique</label>
-        				<input type="text" name="">
-        			</div>
-        			<div>
-        				<label>Mémoire</label>
-        				<input type="text" name="">
-        			</div>
-        			<div>
-        				<label>Connexion</label>
-        				<input type="text" name="">
-        			</div>
-        		</div>
-        	</section>
-        	<section>
-        		<button id="save">Enregistrer</button>
-        	</section>
-        </main>
-        <script src=".js"></script>
-	</body>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet">
+	<meta name="theme-color" content="#333333" />
+	<link rel="icon" type="icon/png" href="../image/favicon.png" />
+	<link rel="stylesheet" href="../css/admin.css">
+	<link rel="stylesheet" href="../css/header.css">
+	<link rel="stylesheet" href="../css/footer.css">
+	<title>Modification - Admin</title>
+</head>
+
+<body>
+	<nav>
+		<section class="heading">
+			<a href="../index.html"><img src="../image/logo.png" alt=""></a>
+		</section>
+		<section class="menu">
+			<div>
+				<img src="../image/icon/person.png" alt="">
+				<p>Auriane (Administrateur)</p>
+			</div>
+			<a href="modify.html">
+				<img src="../image/icon/presentation.png" alt="">
+				<p>Présentation</p>
+			</a>
+			<a href="manage-price.html">
+				<img src="../image/icon/prices.png" alt="">
+				<p>Prix</p>
+			</a>
+			<a href="article.html">
+				<img src="../image/icon/article.png" alt="">
+				<p>Articles</p>
+			</a>
+			<a href="manage-faq.html">
+				<img src="../image/icon/question.png" alt="">
+				<p>FAQ</p>
+			</a>
+			<a href="bug-report.html">
+				<img src="../image/icon/bug-tools.png" alt="">
+				<p>Bug Report</p>
+			</a>
+		</section>
+		<section class="deconnect">
+			<img src="../image/icon/logout.png" alt="">
+			<p>Se déconnecter</p>
+		</section>
+	</nav>
+	<main id="modify">
+		<h1>Modification</h1>
+		<section id="manage-races">
+			<h2>Races</h2>
+			<div>
+				<label>Nom</label>
+				<select name="races" id="select-races">
+					<option value="">Choissisez une race</option>
+					<option value="Nëfraans">Nëfraans</option>
+					<option value="Scraps">Scraps</option>
+					<option value="Humain">Humain</option>
+					<option value="Rakao's">Rakao's</option>
+					<option value="Naukas">Naukas</option>
+				</select>
+			</div>
+			<div>
+				<label>Description de la race</label>
+				<textarea></textarea>
+			</div>
+			<div class="races-stats">
+				<div>
+					<label>Vitesse</label>
+					<input type="text" name="">
+				</div>
+				<div>
+					<label>Puissance</label>
+					<input type="text" name="">
+				</div>
+				<div>
+					<label>Précision</label>
+					<input type="text" name="">
+				</div>
+			</div>
+		</section>
+		<section id="manage-specs">
+			<h2>Configuration</h2>
+			<div>
+				<label>Types de configuration</label>
+				<select name="config" id="select-config">
+					<option value="">Choissisez une race</option>
+					<option value="min">Minimale</option>
+					<option value="fine">Recommandé</option>
+				</select>
+			</div>
+			<div class="specs-stats">
+				<div>
+					<label>Stockage</label>
+					<input type="text" name="">
+				</div>
+				<div>
+					<label>Processeur</label>
+					<input type="text" name="">
+				</div>
+				<div>
+					<label>Carte Graphique</label>
+					<input type="text" name="">
+				</div>
+				<div>
+					<label>Mémoire</label>
+					<input type="text" name="">
+				</div>
+				<div>
+					<label>Connexion</label>
+					<input type="text" name="">
+				</div>
+			</div>
+		</section>
+		<section>
+			<button id="save">Enregistrer</button>
+		</section>
+	</main>
+	<script src=".js"></script>
+</body>
+
 </html>
