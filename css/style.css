@@ -67,6 +67,7 @@ header img {
 	min-width: 400px;
 	padding: 1.5rem;
 	z-index: 99;
+	box-shadow: 0px 0px 15px 1px rgba(187, 187, 187, 0.3);
 }
 .rgpd a {
 	color: var(--purple);
