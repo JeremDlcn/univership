@@ -8,8 +8,9 @@ fetch(`https://univership.herokuapp.com/list`, {
       createContent(data[i]);
     }
   })
-  .then(()=>{
-  	del()
+  .then(() => {
+    del();
+    edit();
   })
 
 
@@ -45,6 +46,7 @@ function createContent(row) {
   img2.src = "../image/icon/eye.png";
   img2.className = 'visibility';
   edit.textContent = 'Modifier';
+  edit.className = 'edition'
   remove.textContent = 'Supprimer';
   remove.className = 'remove';
   remove.href = 'article.html';
@@ -69,14 +71,25 @@ function createContent(row) {
 
 
 function del() {
-	const arrayRemove = document.querySelectorAll('.remove');
-	for (let i = 0; i < arrayRemove.length; i++) {
-		const art = arrayRemove[i].parentElement.parentElement.parentElement
-	  	arrayRemove[i].addEventListener('click', () => {
-	    	fetch(`https://univership.herokuapp.com/delete/${art.getAttribute("nb")}`, {
-	      		method: "DELETE"
-	    	})
-	    	art.remove();
-	  	})
-	}
+  const arrayRemove = document.querySelectorAll('.remove');
+  for (let i = 0; i < arrayRemove.length; i++) {
+    const art = arrayRemove[i].parentElement.parentElement.parentElement
+    arrayRemove[i].addEventListener('click', () => {
+      fetch(`https://univership.herokuapp.com/delete/${art.getAttribute("nb")}`, {
+        method: "DELETE"
+      })
+      art.remove();
+    })
+  }
+}
+
+
+function edit() {
+  const arEdit = document.querySelectorAll('.edition');
+  for (let i = 0; i < arEdit.length; i++) {
+    arEdit[i].addEventListener('click', () => {
+      const art = arEdit[i].parentElement.parentElement.parentElement.getAttribute("nb");
+      window.location.href = `edit-article.html?id=${art}`;
+    })
+  }
 }

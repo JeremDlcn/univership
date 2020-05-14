@@ -1,3 +1,15 @@
+// récupération de l'id de l'article
+const urlID = location.search.split('id=')[1]
+
+// vérifié si c'est la création ou l'édition
+if (urlID !== undefined) {
+    edit(urlID);
+}
+else {
+    create();
+}
+
+
 /*
 Création d'article
 
@@ -8,46 +20,46 @@ Création d'article
 
 */
 
-
-//écrire le code ici
-//Réupération des infos de l'article
-document.querySelector('button').addEventListener('click', () => {
-    let title = document.querySelector('#article-title').value;
-    let category = document.querySelector('#article-category').value;
-    let content = document.querySelector('#article-text').value;
-    //let date = document.querySelector('dateArticle').value;
-    let img = document.querySelector('#article-poster').value;
-    let visibility = document.querySelector('#article-visibility').value;
-
-
-    //remise à zéro des inputs
-    document.querySelector('#article-title').value = "";
-    document.querySelector('#article-category').value = "";
-    document.querySelector('#article-text').value = "";
-    //document.querySelector('dateArticle').value = "";
-    document.querySelector('#article-poster').value = "";
-    document.querySelector('#article-visibility').value = "";
+function create() {
+    //écrire le code ici
+    //Réupération des infos de l'article
+    document.querySelector('button').addEventListener('click', () => {
+        let title = document.querySelector('#article-title').value;
+        let category = document.querySelector('#article-category').value;
+        let content = document.querySelector('#article-text').value;
+        //let date = document.querySelector('dateArticle').value;
+        let img = document.querySelector('#article-poster').value;
+        let visibility = document.querySelector('#article-visibility').value;
 
 
-    //envoi des informations du nouvelle article au serveur
-    fetch(`https://univership.herokuapp.com/create`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-            title: title,
-            category: category,
-            content: content,
-            date: '25/05/20',
-            img: img,
-            visibility: visibility
+        //remise à zéro des inputs
+        document.querySelector('#article-title').value = "";
+        document.querySelector('#article-category').value = "";
+        document.querySelector('#article-text').value = "";
+        //document.querySelector('dateArticle').value = "";
+        document.querySelector('#article-poster').value = "";
+        document.querySelector('#article-visibility').value = "";
+
+
+        //envoi des informations du nouvelle article au serveur
+        fetch(`https://univership.herokuapp.com/create`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                title: title,
+                category: category,
+                content: content,
+                date: '25/05/20',
+                img: img,
+                visibility: visibility
+            })
         })
-    })
-        .then(() => window.location.href = 'article.html');
+            .then(() => window.location.href = 'article.html');
 
-});
-
+    });
 
 
+}
 
 
 
@@ -65,8 +77,22 @@ Edition d'article
 */
 
 
+function edit(ID) {
+    fetch(`https://univership.herokuapp.com/article/${ID}`, {
+        method: "GET"
+    })
+    .then(r => r.json())
+    .then(data => {
+        // mise en place des informations dans les champs de saisie
+        document.querySelector('#article-title').value = data.title;
+        document.querySelector('#article-category').value = data.category;
+        document.querySelector('#article-text').value = data.content;
+        document.querySelector('#article-poster').value = data.img;
+        document.querySelector('#article-visibility').value = data.visibility;
+        //envoyer les informations vers le fetch d'édition
+        fetch(`https://univership.herokuapp.com/edit/${data.id}`,{
+            //écrire le code ici
+        })
+    })
 
-
-
-
-//écrire le code ici
+}
