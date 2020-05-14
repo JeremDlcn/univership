@@ -49,7 +49,6 @@ function create() {
                 title: title,
                 category: category,
                 content: content,
-                date: '25/05/20',
                 img: img,
                 visibility: visibility
             })
