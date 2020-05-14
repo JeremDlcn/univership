@@ -11,7 +11,6 @@ fetch(`https://univership.herokuapp.com/list`, {
   .then(() => {
     del();
     edit();
-    visibility();
   })
 
 
@@ -91,14 +90,35 @@ function del() {
   for (let i = 0; i < arrayRemove.length; i++) {
     const art = arrayRemove[i].parentElement.parentElement.parentElement
     arrayRemove[i].addEventListener('click', () => {
-      fetch(`https://univership.herokuapp.com/delete/${art.getAttribute("nb")}`, {
-        method: "DELETE"
-      })
-      art.remove();
+      pop();
+      document.querySelector('dialog').showModal();
+      document.querySelector('#yes').addEventListener('click', ()=>{
+        fetch(`https://univership.herokuapp.com/delete/${art.getAttribute("nb")}`, {
+          method: "DELETE"
+        })
+        art.remove();
+        document.querySelector('dialog').close();
+      });
+      document.querySelector('#no').addEventListener('click', ()=>{
+        document.querySelector('dialog').close();
+      });
     })
   }
 }
 
+function pop() {
+  const dial = document.createElement('dialog');
+  const accept = document.createElement('button');
+  const cancel = document.createElement('button');
+  dial.innerHTML = "Voulez-vous vraiment supprimer cet article ?"
+  accept.innerHTML = "Supprimer";
+  cancel.innerHTML = "Annuler";
+  accept.id = "yes";
+  cancel.id = "no";
+  dial.appendChild(accept);
+  dial.appendChild(cancel);
+  document.querySelector('main').appendChild(dial);
+}
 
 function edit() {
   const arEdit = document.querySelectorAll('.edition');

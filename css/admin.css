@@ -149,10 +149,37 @@ select {
 	margin-top: .5rem;
 }
 
+dialog {
+	background-color: var(--dark-gray);
+	color: var(--text-color);
+	text-align: center;
+	border: none;
+	padding: 2rem;
+	border-radius: 6px;
+	box-shadow: 0 0 40px rgba(0,0,0,0.1), 0 0 10px rgba(0,0,0,0.25);
+	max-width: 90vw;
+	margin: auto;
+  }
+    
+  dialog::backdrop {
+	background: rgba(255, 255, 255, 0.25);
+}
+dialog button{
+	border: none;
+	margin: 1rem;
+	padding: .5rem 1rem;
+}
 
+dialog button:first-of-type {
+	color: var(--main-font);
+	background-color: red;
+}
 
-
-
+dialog button:last-of-type {
+	color: var(--main-font);
+	background-color: transparent;
+	border:2px solid var(--main-font);
+}
 /* Prix */
 #prices-forumles, #feature-container {
 	display: grid;
