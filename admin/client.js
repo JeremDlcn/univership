@@ -11,6 +11,7 @@ fetch(`https://univership.herokuapp.com/list`, {
   .then(() => {
     del();
     edit();
+    visibility();
   })
 
 
@@ -36,14 +37,29 @@ function createContent(row) {
   //link.href = `article.html?id=${row.id}`;
   div.className = 'article';
   div.setAttribute("nb", row.id);
-  img.src = '../image/news/news1.png';
+  if (row.img != ''){
+    img.src = row.img;
+  }
+  else {
+    img.src = '../image/news/news1.png';
+  }
   div3.className = 'corps';
   title.innerHTML = row.title;
   date.innerHTML = row.date;
   content.innerHTML = row.content;
   div4.className = 'tools';
+  figure.className = 'visib'
   figcaption.textContent = row.visibility;
-  img2.src = "../image/icon/eye.png";
+  if (row.visibility == "private"){
+    img2.src = "../image/icon/no_eye.png";
+  }
+  else if (row.visibility == "public"){
+    img2.src = "../image/icon/eye.png";
+  }
+  else{
+    img2.src = "../image/icon/eye.png";
+  }
+
   img2.className = 'visibility';
   edit.textContent = 'Modifier';
   edit.className = 'edition'

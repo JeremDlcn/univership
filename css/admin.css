@@ -126,7 +126,7 @@ select {
 }
 
 #manage-races textarea {
-	min-height: 5rem;
+	min-height: 8rem;
 }
 
 .races-stats {
@@ -142,6 +142,11 @@ select {
 .specs-stats div {
 	display: flex;
 	flex-direction: column;
+}
+.specs-stats input {
+	height: 2.5rem;
+	margin-bottom: 1rem;
+	margin-top: .5rem;
 }
 
 
@@ -222,6 +227,10 @@ input {
 	color: var(--main-font);
 	border-radius: 3px;
 }
+
+#article-title{
+	height: 3rem;
+}
 textarea {
 	min-height: 300px;
 	padding: 1rem;
@@ -243,6 +252,7 @@ main > section > a {
 	align-self: center;
 	font-weight: bold;
 	color: var(--main-font);
+	cursor: pointer;
 }
 
 #save img, #write img{
@@ -311,20 +321,26 @@ figcaption {
 	text-align: end;
 	display: flex;
 	flex-direction: column;
+	margin-top: 2rem;
 }
 
 .tools div p {
 	font-size: .8rem;
 	font-weight: 900;
-	color: var(--purple);
-	font-weight: 800;
 	cursor: pointer;
 }
 .remove {
-	color: red!important;
+	background-color: red;
+	padding: .5rem 1rem;
+	text-align: center;
+	margin-top: 1rem;
 }
 
-
+.edition {
+	background-color: var(--purple);
+	padding: .5rem 1rem;
+	text-align: center;
+}
 
 /* FAQ */
 .question {
