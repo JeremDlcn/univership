@@ -215,7 +215,7 @@ header img {
 }
 
 #game p{
-	line-height: 24px;
+	line-height: 2.4rem;
 }
 
 #game div:last-of-type {
@@ -254,7 +254,7 @@ header img {
 
 #feature p{
 	width: 400px;
-	line-height: 26px;
+	line-height: 2.6rem;
 }
 
 
@@ -291,6 +291,7 @@ header img {
 
 #feature section:last-of-type div:last-of-type {
 	width: 40%;
+	z-index: 5;
 }
 
 
@@ -403,6 +404,7 @@ header img {
 	display: flex;	
 	flex-direction: row;
 	padding: 25px 35px;
+	z-index: 5;
 }
 
 .infosSpecies h3 {
@@ -631,5 +633,26 @@ progress::-ms-fill {
 	}
 	.rgpd {
 		min-width: 95%;
+	}
+}
+
+/* extra large */ 
+@media (min-width: 2500px){
+	body {
+		font-size: 1.5rem;
+		/* line-height: 1.25rem; */
+	}
+	.shadeMM {
+		bottom: -190px;
+		z-index: 3;
+	}
+	.shadeM {
+		bottom: -290px;
+	}
+	#feature {
+		margin-bottom: 10rem;
+	}
+	#game div:first-of-type {
+		width: 40%;
 	}
 }

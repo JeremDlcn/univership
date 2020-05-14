@@ -157,6 +157,7 @@ article > div:last-of-type {
 
 article img {
 	width: 100%;
+	max-width: 600px;
 	height: 100%;
 }
 
@@ -247,4 +248,26 @@ article b {
 	}
 
 
+}
+
+/* extra large */ 
+@media (min-width: 2500px){
+	html {
+		font-size: 2rem;
+	}
+	.shadeDown {
+		z-index: -5;
+	}
+	article {
+		margin-bottom: 8rem;
+	}
+	article > div:first-of-type {
+		display: flex;
+		justify-content: center;
+
+	}
+
+	#side h2{
+		font-size: 1rem;
+	}
 }

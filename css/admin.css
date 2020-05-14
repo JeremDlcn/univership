@@ -280,6 +280,7 @@ main > section > a {
 	font-weight: bold;
 	color: var(--main-font);
 	cursor: pointer;
+	font-size: 1rem;
 }
 
 #save img, #write img{
@@ -460,5 +461,15 @@ figcaption {
 	}
 	main > section h2 {
 		font-size: 1rem;
+	}
+}
+
+/* extra large */ 
+@media (min-width: 2500px){
+	html {
+		font-size: 1.5rem;
+	}
+	.article > div > img {
+		width: 240px;
 	}
 }
