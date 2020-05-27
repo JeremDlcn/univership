@@ -1,3 +1,15 @@
+// récupération de l'id de l'article
+const urlID = location.search.split('id=')[1]
+
+// vérifié si c'est la création ou l'édition
+if (urlID !== undefined) {
+    edit(urlID);
+}
+else {
+    create();
+}
+
+
 /*
 	Création d'une question
 	-----------------------
@@ -9,16 +21,17 @@
 	6- on recharge la page pour afficher la liste complète des questions
 */
 
+
 function create() {
     //Récupération des infos de l'article
-    document.querySelector('button').addEventListener('click', () => {
-        let question = document.querySelector('#faq-question').value;
-        let answer = document.querySelector('#faq-answer').value;
+    document.querySelector('#save').addEventListener('click', () => {
+        let question = document.querySelector('#faq-title').value;
+        let answer = document.querySelector('#faq-text').value;
 
 
         //remise à zéro des inputs
-        document.querySelector('#faq-question').value = "";
-        document.querySelector('#faq-answer').value = "";
+        document.querySelector('#faq-title').value = "";
+        document.querySelector('#faq-text').value = "";
 
 
         //envoi des informations du nouvelle article au serveur
@@ -32,4 +45,36 @@ function create() {
         })
         .then(() => window.location.href = 'manage-faq.html');
     });
+}
+
+
+
+function edit(ID) {
+    fetch(`https://univership.herokuapp.com/faq/${ID}`, {
+        method: "GET"
+    })
+    .then(r => r.json())
+    .then(data => {
+        // mise en place des informations dans les champs de saisie
+        document.querySelector('#faq-title').value = data.question;
+        document.querySelector('#faq-text').value = data.answer;
+
+
+
+        document.querySelector('.edit').addEventListener('click', ()=>{
+	        let title = document.querySelector('#faq-title').value;
+	        let category = document.querySelector('#faq-text').value;
+
+            //envoyer les informations vers le fetch d'édition
+            fetch(`https://univership.herokuapp.com/edit/${data.id}`,{
+                method: "POST",
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    question: question,
+                	answer: answer
+                })
+            })
+            .then(() => window.location.href = 'manage-faq.html');
+        })
+    })
 }
