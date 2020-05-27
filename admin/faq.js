@@ -9,6 +9,8 @@
 	6- on recharge la page pour afficher la liste complète des questions
 */
 
+create();
+
 function create() {
     //Récupération des infos de l'article
     document.querySelector('button').addEventListener('click', () => {
