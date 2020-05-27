@@ -14,13 +14,13 @@ create();
 function create() {
     //Récupération des infos de l'article
     document.querySelector('#save').addEventListener('click', () => {
-        let question = document.querySelector('#faq-question').value;
-        let answer = document.querySelector('#faq-answer').value;
+        let question = document.querySelector('#faq-title').value;
+        let answer = document.querySelector('#faq-text').value;
 
 
         //remise à zéro des inputs
-        document.querySelector('#faq-question').value = "";
-        document.querySelector('#faq-answer').value = "";
+        document.querySelector('#faq-title').value = "";
+        document.querySelector('#faq-text').value = "";
 
 
         //envoi des informations du nouvelle article au serveur
