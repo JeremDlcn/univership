@@ -21,8 +21,7 @@ Création d'article
 */
 
 function create() {
-    //écrire le code ici
-    //Réupération des infos de l'article
+    //Récupération des infos de l'article
     document.querySelector('button').addEventListener('click', () => {
         let title = document.querySelector('#article-title').value;
         let category = document.querySelector('#article-category').value;

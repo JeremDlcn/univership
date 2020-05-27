@@ -10,16 +10,15 @@
 */
 
 function create() {
-    //écrire le code ici
-    //Réupération des infos de l'article
+    //Récupération des infos de l'article
     document.querySelector('button').addEventListener('click', () => {
-        let question = document.querySelector('#article-question').value;
-        let answer = document.querySelector('#article-answer').value;
+        let question = document.querySelector('#faq-question').value;
+        let answer = document.querySelector('#faq-answer').value;
 
 
         //remise à zéro des inputs
-        document.querySelector('#article-question').value = "";
-        document.querySelector('#article-answer').value = "";
+        document.querySelector('#faq-question').value = "";
+        document.querySelector('#faq-answer').value = "";
 
 
         //envoi des informations du nouvelle article au serveur
