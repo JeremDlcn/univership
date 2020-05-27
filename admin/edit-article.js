@@ -95,6 +95,8 @@ function edit(ID) {
 
         //envoyer les informations vers le fetch d'édition
         fetch(`https://univership.herokuapp.com/edit/${data.id}`,{
+            method: "POST",
+            headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
                 title: title,
                 category: category,
