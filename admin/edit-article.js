@@ -85,6 +85,14 @@ function edit(ID) {
         document.querySelector('#article-text').value = data.content;
         document.querySelector('#article-poster').value = data.img;
         document.querySelector('#article-visibility').value = data.visibility;
+
+        let title = document.querySelector('#article-title').value;
+        let category = document.querySelector('#article-category').value;
+        let content = document.querySelector('#article-text').value;
+        //let date = document.querySelector('dateArticle').value;
+        let img = document.querySelector('#article-poster').value;
+        let visibility = document.querySelector('#article-visibility').value;
+
         //envoyer les informations vers le fetch d'édition
         fetch(`https://univership.herokuapp.com/edit/${data.id}`,{
             body: JSON.stringify({
