@@ -61,7 +61,7 @@ function edit(ID) {
 
 
 
-        document.querySelector('edit').addEventListener('click', ()=>{
+        document.querySelector('.edit').addEventListener('click', ()=>{
 	        let title = document.querySelector('#faq-title').value;
 	        let category = document.querySelector('#faq-text').value;
 
