@@ -13,7 +13,7 @@ create();
 
 function create() {
     //Récupération des infos de l'article
-    document.querySelector('button').addEventListener('click', () => {
+    document.querySelector('#save').addEventListener('click', () => {
         let question = document.querySelector('#faq-question').value;
         let answer = document.querySelector('#faq-answer').value;
 
