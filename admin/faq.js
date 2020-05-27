@@ -10,6 +10,7 @@
 */
 
 create();
+edit();
 
 function create() {
     //Récupération des infos de l'article
@@ -50,7 +51,7 @@ function edit(ID) {
 
 
 
-        document.querySelector('#save').addEventListener('click', ()=>{
+        document.querySelector('edit').addEventListener('click', ()=>{
 	        let title = document.querySelector('#faq-title').value;
 	        let category = document.querySelector('#faq-text').value;
 
