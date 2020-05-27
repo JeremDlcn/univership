@@ -53,11 +53,8 @@ function create() {
                 visibility: visibility
             })
         })
-            .then(() => window.location.href = 'article.html');
-
+        .then(() => window.location.href = 'article.html');
     });
-
-
 }
 
 
@@ -90,8 +87,14 @@ function edit(ID) {
         document.querySelector('#article-visibility').value = data.visibility;
         //envoyer les informations vers le fetch d'édition
         fetch(`https://univership.herokuapp.com/edit/${data.id}`,{
-            //écrire le code ici
+            body: JSON.stringify({
+                title: title,
+                category: category,
+                content: content,
+                img: img,
+                visibility: visibility
+            })
         })
+        .then(() => window.location.href = 'article.html');
     })
-
 }
