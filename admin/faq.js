@@ -1,3 +1,15 @@
+// récupération de l'id de l'article
+const urlID = location.search.split('id=')[1]
+
+// vérifié si c'est la création ou l'édition
+if (urlID !== undefined) {
+    edit(urlID);
+}
+else {
+    create();
+}
+
+
 /*
 	Création d'une question
 	-----------------------
@@ -9,8 +21,6 @@
 	6- on recharge la page pour afficher la liste complète des questions
 */
 
-create();
-edit();
 
 function create() {
     //Récupération des infos de l'article
