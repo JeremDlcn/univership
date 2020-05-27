@@ -93,18 +93,20 @@ function edit(ID) {
         let img = document.querySelector('#article-poster').value;
         let visibility = document.querySelector('#article-visibility').value;
 
-        //envoyer les informations vers le fetch d'édition
-        fetch(`https://univership.herokuapp.com/edit/${data.id}`,{
-            method: "POST",
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-                title: title,
-                category: category,
-                content: content,
-                img: img,
-                visibility: visibility
+        document.querySelector('button').addEventListener('click', ()=>{
+            //envoyer les informations vers le fetch d'édition
+            fetch(`https://univership.herokuapp.com/edit/${data.id}`,{
+                method: "POST",
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    title: title,
+                    category: category,
+                    content: content,
+                    img: img,
+                    visibility: visibility
+                })
             })
+            .then(() => window.location.href = 'article.html');
         })
-        .then(() => window.location.href = 'article.html');
     })
 }
