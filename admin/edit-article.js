@@ -27,7 +27,6 @@ function create() {
         let title = document.querySelector('#article-title').value;
         let category = document.querySelector('#article-category').value;
         let content = document.querySelector('#article-text').value;
-        //let date = document.querySelector('dateArticle').value;
         let img = document.querySelector('#article-poster').value;
         let visibility = document.querySelector('#article-visibility').value;
 
@@ -36,7 +35,6 @@ function create() {
         document.querySelector('#article-title').value = "";
         document.querySelector('#article-category').value = "";
         document.querySelector('#article-text').value = "";
-        //document.querySelector('dateArticle').value = "";
         document.querySelector('#article-poster').value = "";
         document.querySelector('#article-visibility').value = "";
 
@@ -86,14 +84,15 @@ function edit(ID) {
         document.querySelector('#article-poster').value = data.img;
         document.querySelector('#article-visibility').value = data.visibility;
 
-        let title = document.querySelector('#article-title').value;
-        let category = document.querySelector('#article-category').value;
-        let content = document.querySelector('#article-text').value;
-        //let date = document.querySelector('dateArticle').value;
-        let img = document.querySelector('#article-poster').value;
-        let visibility = document.querySelector('#article-visibility').value;
+
 
         document.querySelector('button').addEventListener('click', ()=>{
+	        let title = document.querySelector('#article-title').value;
+	        let category = document.querySelector('#article-category').value;
+	        let content = document.querySelector('#article-text').value;
+	        let img = document.querySelector('#article-poster').value;
+	        let visibility = document.querySelector('#article-visibility').value;
+
             //envoyer les informations vers le fetch d'édition
             fetch(`https://univership.herokuapp.com/edit/${data.id}`,{
                 method: "POST",
