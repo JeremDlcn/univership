@@ -35,3 +35,35 @@ function create() {
         .then(() => window.location.href = 'manage-faq.html');
     });
 }
+
+
+
+function edit(ID) {
+    fetch(`https://univership.herokuapp.com/faq/${ID}`, {
+        method: "GET"
+    })
+    .then(r => r.json())
+    .then(data => {
+        // mise en place des informations dans les champs de saisie
+        document.querySelector('#faq-title').value = data.question;
+        document.querySelector('#faq-text').value = data.answer;
+
+
+
+        document.querySelector('#save').addEventListener('click', ()=>{
+	        let title = document.querySelector('#faq-title').value;
+	        let category = document.querySelector('#faq-text').value;
+
+            //envoyer les informations vers le fetch d'édition
+            fetch(`https://univership.herokuapp.com/edit/${data.id}`,{
+                method: "POST",
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    question: question,
+                	answer: answer
+                })
+            })
+            .then(() => window.location.href = 'manage-faq.html');
+        })
+    })
+}
