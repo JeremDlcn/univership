@@ -23,11 +23,14 @@ Création d'article
 function create() {
     //Récupération des infos de l'article
     document.querySelector('button').addEventListener('click', () => {
+
+        let content = tinymce.activeEditor.getContent();
         let title = document.querySelector('#article-title').value;
         let category = document.querySelector('#article-category').value;
-        let content = document.querySelector('#article-text').value;
         let img = document.querySelector('#article-poster').value;
         let visibility = document.querySelector('#article-visibility').value;
+
+
 
 
         //remise à zéro des inputs

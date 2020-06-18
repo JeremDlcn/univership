@@ -71,7 +71,8 @@ function createContent(row) {
 
   //link.appendChild(div);
   div.appendChild(div2);
-  div.appendChild(div3);
+  link.appendChild(div3);
+  div.appendChild(link);
   div.appendChild(div4);
   div2.appendChild(img);
   div3.appendChild(title);
@@ -83,9 +84,8 @@ function createContent(row) {
   figure.appendChild(img2);
   div5.appendChild(edit);
   div5.appendChild(remove);
-  link.appendChild(div);
 
-  document.querySelector('article').appendChild(link);
+  document.querySelector('article').appendChild(div);
 }
 
 

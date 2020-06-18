@@ -320,6 +320,10 @@ main > section > a {
 	font-size: .7rem;
 }
 
+.article a {
+	display: flex;
+}
+
 .content-article {
 	display: -webkit-box;
 	-webkit-line-clamp: 3;
