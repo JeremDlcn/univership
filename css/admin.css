@@ -367,6 +367,36 @@ figcaption {
 	text-align: center;
 }
 
+/* View article */
+#upper-view {
+	display: flex;
+	justify-content: center;
+}
+
+#view {
+	max-width: 1400px;
+}
+
+.view-title {
+
+}
+
+.view-infos {
+	display: flex;
+	flex-direction: row;
+}
+.view-infos #visibility {
+	margin: 0;
+}
+
+.view-content {
+
+}
+
+
+
+
+
 /* FAQ */
 .question {
 	display: flex;
