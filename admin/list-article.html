@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../css/admin.css">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/footer.css">
-    <title>Edit Article - Admin</title>
+    <title>Articles - Admin</title>
 </head>
 
 <body>
@@ -31,7 +31,7 @@
                 <img src="../image/icon/prices.png" alt="">
                 <p>Prix</p>
             </a>
-            <a href="list-article.html">
+            <a href="article.html">
                 <img src="../image/icon/article.png" alt="">
                 <p>Articles</p>
             </a>
@@ -52,42 +52,18 @@
         </section>
     </nav>
     <main>
-        <h1>Création d'article</h1>
-        <section>
-            <div>
-                <h2>Titre de l'article</h2>
-                <input type="text" name="title" id="article-title">
-            </div>
-            <div id="category">
-                <div>
-                    <h2>Catégorie de l'article</h2>
-                    <select id="article-category">
-                        <option value="maj">Mise à Jour</option>
-                        <option value="encours">En cours de développement</option>
-                        <option value="news">News</option>
-                        <option value="maintenance">Maintenance</option>
-                    </select>
-                </div>
-                <div class="post-art">
-                    <h2>Miniature de l'article</h2>
-                    <input type="text" placeholder="https://" id="article-poster">
-                </div>
-                <div>
-                    <h2>Visibilité de l'article</h2>
-                    <select id="article-visibility">
-                        <option value="public">Public</option>
-                        <option value="private">Privé</option>
-                    </select>
-                </div>
-            </div>
-            <div>
-                <h2>Contenu de l'article</h2>
-                <textarea placeholder="Tapez du texte ici" id="article-text"></textarea>
-            </div>
-            <button id="save"><img src="../image/icon/save.png">Enregistrer</button>
+        <section id="topArticle">
+            <h1>Articles</h1>
+            <a href="edit-article.html"><button id="write"><img src="../image/icon/document.png">Écrire un
+                    Article</button></a>
+        </section>
+        <section id="listArticles">
+            <h2>Liste des articles</h2>
+            <article>
+            </article>
         </section>
     </main>
-    <script src="edit-article.js"></script>
+    <script src="list-article.js"></script>
 </body>
 
 </html>

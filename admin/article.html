@@ -1,69 +1,31 @@
 <!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet">
-    <meta name="theme-color" content="#333333" />
-    <link rel="icon" type="icon/png" href="../image/favicon.png" />
-    <link rel="stylesheet" href="../css/admin.css">
-    <link rel="stylesheet" href="../css/header.css">
-    <link rel="stylesheet" href="../css/footer.css">
-    <title>Articles - Admin</title>
-</head>
-
-<body>
-    <nav>
-        <section class="heading">
-            <a href="../index.html"><img src="../image/logo.png" alt=""></a>
-        </section>
-        <section class="menu">
-            <div>
-                <img src="../image/icon/person.png" alt="">
-                <p>Auriane (Administrateur)</p>
-            </div>
-            <a href="modify.html">
-                <img src="../image/icon/presentation.png" alt="">
-                <p>Présentation</p>
-            </a>
-            <a href="manage-price.html">
-                <img src="../image/icon/prices.png" alt="">
-                <p>Prix</p>
-            </a>
-            <a href="article.html">
-                <img src="../image/icon/article.png" alt="">
-                <p>Articles</p>
-            </a>
-            <a href="manage-faq.html">
-                <img src="../image/icon/question.png" alt="">
-                <p>FAQ</p>
-            </a>
-            <a href="bug-report.html">
-                <img src="../image/icon/bug-tools.png" alt="">
-                <p>Bug Report</p>
-            </a>
-        </section>
-        <section class="deconnect">
-            <img src="../image/icon/logout.png" alt="">
-            <a href="../index.html">
-                <p>Se déconnecter</p>
-            </a>
-        </section>
-    </nav>
-    <main>
-        <section id="topArticle">
-            <h1>Articles</h1>
-            <a href="edit-article.html"><button id="write"><img src="../image/icon/document.png">Écrire un
-                    Article</button></a>
-        </section>
-        <section id="listArticles">
-            <h2>Liste des articles</h2>
-            <article>
-            </article>
-        </section>
-    </main>
-    <script src="article.js"></script>
-</body>
-
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet">
+        <meta name="theme-color" content="#333333" />
+        <link rel="icon" type="icon/png" href="../image/favicon.png" />
+        <link rel="stylesheet" href="../css/admin.css">
+        <link rel="stylesheet" href="../css/header.css">
+        <link rel="stylesheet" href="../css/footer.css">
+        <title>Article - Univership</title>
+    </head>
+    <body>
+        <main>
+            <section>
+                <img src="" alt="" id="img">
+                <h1 id="title"></h1>
+            </section>
+            <section>
+                <p id="category"></p>
+                <div id="visibility"></div>
+                <b id="date"></b>
+            </section>
+            <section>
+                <article id="content"></article>
+            </section>
+        </main>
+        <script src="article.js"></script>
+    </body>
 </html>

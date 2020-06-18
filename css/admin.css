@@ -35,7 +35,10 @@ main {
 	width: 100%;
 	display: flex;
 	flex-direction: column;
+	height: 100%;
+	padding: 0 12vw;
 }
+
 
 a {
 	text-decoration: none;
@@ -85,12 +88,6 @@ nav {
 
 .deconnect {
 	align-self: flex-end;
-}
-
-main {
-	height: 100%;
-	width: 80vw;
-	padding: 0 12vw;
 }
 
 
