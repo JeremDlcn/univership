@@ -26,5 +26,10 @@ fetch(`https://univership.herokuapp.com/article/${urlID}`, {
     document.querySelector('#date').innerHTML = data.date;
     document.querySelector('#visibility').innerHTML = data.visibility;
     document.querySelector('#content').innerHTML = data.content;
-    document.querySelector('#img').src = data.img;
+    if (data.img == ''){
+      document.querySelector('#img').src = '../image/spot.png'
+    }
+    else {
+      document.querySelector('#img').src = data.img;
+    }
   };

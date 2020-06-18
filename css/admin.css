@@ -320,6 +320,13 @@ main > section > a {
 	font-size: .7rem;
 }
 
+.content-article {
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;  
+	overflow: hidden;
+}
+
 .tools {
 	margin-left: 1rem;
 	display: flex;
@@ -414,6 +421,11 @@ figcaption {
 	margin: 0;
 }
 
+.view-content {
+	padding-bottom: 4rem;
+	font-size: 1.2rem;
+}
+
 #category-value {
 	font-weight: bold;
 }
@@ -421,8 +433,17 @@ figcaption {
 	font-weight: bold;
 }
 
-.view-content {
 
+.back {
+	border: none;
+	background-color: var(--purple);
+	color: var(--main-font);
+	font-weight: bold;
+	padding: .5rem .7rem;
+	position: fixed;
+	top: 2rem;
+	left: 2rem;
+	cursor: pointer;
 }
 
 

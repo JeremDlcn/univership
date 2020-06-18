@@ -48,6 +48,7 @@ function createContent(row) {
   title.innerHTML = row.title;
   date.innerHTML = row.date;
   content.innerHTML = row.content;
+  content.className = 'content-article'
   div4.className = 'tools';
   figure.className = 'visib'
   figcaption.textContent = row.visibility;
