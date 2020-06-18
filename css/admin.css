@@ -378,15 +378,47 @@ figcaption {
 }
 
 .view-title {
+	display: flex;
+	align-items: center;
+	margin-bottom: 4rem;
+}
 
+.view-title img {
+	width: 100%;
+	height: 50vh;
+	object-fit: cover;
+	border-radius: 5px;
+}
+
+.view-title .under {
+	content: '';
+	background-color: var(--purple);
+	width: 4rem;
+	height: .3rem;
+	display: block;
+}
+
+.view-title h1 {
+	font-size: 2rem;
+	text-align: center;
+	margin-top: 4rem;
 }
 
 .view-infos {
 	display: flex;
 	flex-direction: row;
+	justify-content: space-between;
+	margin-bottom: 2rem;
 }
-.view-infos #visibility {
+.view-infos div {
 	margin: 0;
+}
+
+#category-value {
+	font-weight: bold;
+}
+#visibility {
+	font-weight: bold;
 }
 
 .view-content {

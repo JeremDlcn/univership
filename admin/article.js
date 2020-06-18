@@ -22,7 +22,7 @@ fetch(`https://univership.herokuapp.com/article/${urlID}`, {
 
   function setInfos(data) {
     document.querySelector('#title').innerHTML = data.title;
-    document.querySelector('#category').innerHTML = data.category;
+    document.querySelector('#category-value').innerHTML = data.category;
     document.querySelector('#date').innerHTML = data.date;
     document.querySelector('#visibility').innerHTML = data.visibility;
     document.querySelector('#content').innerHTML = data.content;
