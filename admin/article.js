@@ -27,11 +27,7 @@ document.querySelector('.edit-button').addEventListener('click', ()=>{
 
 // return to view mode
 document.querySelector('.view-button').addEventListener('click', ()=>{
-  tinymce.activeEditor.remove();
-  document.querySelector('#content').removeAttribute("contenteditable");
-  document.querySelector('.edit-button').style.display = 'block';
-  document.querySelector('.save-button').style.display = 'none';
-  document.querySelector('.view-button').style.display = 'none';
+  disableEditor();
 });
 
 
@@ -40,7 +36,20 @@ document.querySelector('.view-button').addEventListener('click', ()=>{
 document.querySelector('.save-button').addEventListener('click', ()=>{
   let cont = tinymce.activeEditor.getContent();
   console.log(cont);
+  disableEditor();
 });
+
+
+function disableEditor() {
+  tinymce.activeEditor.remove();
+  document.querySelector('#content').removeAttribute("contenteditable");
+  document.querySelector('.edit-button').style.display = 'block';
+  document.querySelector('.save-button').style.display = 'none';
+  document.querySelector('.view-button').style.display = 'none';
+}
+
+
+
 
 
 
