@@ -19,6 +19,7 @@ let contentmce = {
 // edit mode
 document.querySelector('.edit-button').addEventListener('click', ()=>{
   tinymce.init(contentmce);
+  document.querySelector('#content').setAttribute("contenteditable", "true");
   document.querySelector('.edit-button').style.display = 'none';
   document.querySelector('.save-button').style.display = 'block';
   document.querySelector('.view-button').style.display = 'block';
@@ -27,6 +28,7 @@ document.querySelector('.edit-button').addEventListener('click', ()=>{
 // return to view mode
 document.querySelector('.view-button').addEventListener('click', ()=>{
   tinymce.activeEditor.remove();
+  document.querySelector('#content').removeAttribute("contenteditable");
   document.querySelector('.edit-button').style.display = 'block';
   document.querySelector('.save-button').style.display = 'none';
   document.querySelector('.view-button').style.display = 'none';
