@@ -6,6 +6,27 @@ if (urlID === undefined) {
     window.location.href = "list-article.html"
 }
 
+let contentmce = {
+    selector: ".content",
+    plugins: [ 'quickbars' ],
+    toolbar: false,
+    menubar: false,
+    inline: true
+};
+
+
+
+tinymce.init(contentmce);
+// edit mode
+document.querySelector('.edit-button').addEventListener('click', ()=>{
+  tinymce.init(contentmce);
+});
+
+document.querySelector('.save-button').addEventListener('click', ()=>{
+  let cont = tinymce.activeEditor.getContent();
+  console.log(cont);
+  
+});
 
 
 

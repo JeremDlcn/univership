@@ -1,0 +1,167 @@
+:root {
+	--main-color: #111111;
+	--purple: #6E51BE;
+	--light-gray: #999999;
+	--lightM-gray: #888888;
+	--medium-gray: #333333;
+	--dark-gray: #1E1E1E;
+	--main-font: #EEEEEE;
+	--hover-font: #D0D0D0;
+}
+
+
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html, body {
+	scroll-behavior: smooth;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+}
+
+body {
+	background-color: var(--main-color);
+	color: var(--main-font);
+	font-family: 'Exo', sans-serif;
+	border: 0;
+	display: flex;
+}
+
+main {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	padding: 0 12vw;
+}
+
+
+a {
+	text-decoration: none;
+	color: var(--main-font);
+}
+
+a:hover {
+	text-decoration: none;
+	color: var(--hover-font);
+}
+
+
+/* View article */
+#upper-view {
+	display: flex;
+	justify-content: center;
+}
+
+#view {
+	max-width: 1400px;
+}
+
+.view-title {
+    display: flex;
+    flex-direction: column;
+	align-items: center;
+	margin-bottom: 4rem;
+}
+
+.view-title img {
+	width: 100%;
+	height: 50vh;
+	object-fit: cover;
+	border-radius: 5px;
+}
+
+.view-title h1 {
+	font-size: 2rem;
+	text-align: center;
+	margin: 4rem 0 1rem 0;
+}
+
+.view-title .under {
+	content: '';
+	background-color: var(--purple);
+	width: 4rem;
+	height: .3rem;
+	display: block;
+}
+
+
+
+.view-infos {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-bottom: 2rem;
+}
+.view-infos div {
+	margin: 0;
+}
+
+.view-content {
+	padding-bottom: 4rem;
+	font-size: 1.2rem;
+    position: relative;
+}
+#content {
+    outline: none;
+}
+
+#category-value {
+	font-weight: bold;
+}
+#visibility {
+	font-weight: bold;
+}
+
+
+.back {
+	border: none;
+	background-color: var(--dark-gray);
+	border: 1px solid white;
+	border-radius: 2px;
+	color: var(--main-font);
+	font-weight: bold;
+	padding: .5rem .7rem;
+	position: fixed;
+	top: 2rem;
+	left: 2rem;
+	cursor: pointer;
+}
+
+.edit-button {
+	width: 3rem;
+	height: 3rem;
+	background-color: var(--purple);
+	border: none;
+	border-radius: 50%;
+	position: fixed;
+	bottom: 4rem;
+	right: 6rem;
+	cursor: pointer;
+}
+
+.edit-button img {
+	width: 40%;
+}
+
+.save-button {
+	background-color: var(--purple);
+	border: none;
+	border-radius: 2px;
+	color: var(--main-font);
+	font-weight: bold;
+	padding: 1rem .7rem;
+	cursor: pointer;
+	margin-bottom: 4rem;
+	font-size: 1.5rem;
+}
+
+.save-button img {
+	height: 1.4rem;
+}
+
+
