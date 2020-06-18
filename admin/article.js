@@ -16,16 +16,28 @@ let contentmce = {
 
 
 
-tinymce.init(contentmce);
 // edit mode
 document.querySelector('.edit-button').addEventListener('click', ()=>{
   tinymce.init(contentmce);
+  document.querySelector('.edit-button').style.display = 'none';
+  document.querySelector('.save-button').style.display = 'block';
+  document.querySelector('.view-button').style.display = 'block';
 });
 
+// return to view mode
+document.querySelector('.view-button').addEventListener('click', ()=>{
+  tinymce.activeEditor.remove();
+  document.querySelector('.edit-button').style.display = 'block';
+  document.querySelector('.save-button').style.display = 'none';
+  document.querySelector('.view-button').style.display = 'none';
+});
+
+
+
+// save changes
 document.querySelector('.save-button').addEventListener('click', ()=>{
   let cont = tinymce.activeEditor.getContent();
   console.log(cont);
-  
 });
 
 

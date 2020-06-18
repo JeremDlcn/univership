@@ -132,10 +132,11 @@ a:hover {
 	cursor: pointer;
 }
 
-.edit-button {
+
+
+.edit-button, .view-button {
 	width: 3rem;
 	height: 3rem;
-	background-color: var(--purple);
 	border: none;
 	border-radius: 50%;
 	position: fixed;
@@ -144,8 +145,19 @@ a:hover {
 	cursor: pointer;
 }
 
-.edit-button img {
-	width: 40%;
+.view-button {
+	background-color: var(--lightM-gray);
+	font-size: 1.5rem;
+	display: none;
+}
+
+.edit-button {
+	background-color: var(--purple);
+}
+
+.edit-button img, .view-button img {
+	width: 42%;
+	margin-top: 5px;
 }
 
 .save-button {
@@ -156,8 +168,10 @@ a:hover {
 	font-weight: bold;
 	padding: 1rem .7rem;
 	cursor: pointer;
+	width: 100%;
 	margin-bottom: 4rem;
 	font-size: 1.5rem;
+	display: none;
 }
 
 .save-button img {
