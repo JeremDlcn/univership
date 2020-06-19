@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet">
+        <meta name="theme-color" content="#333333" />
+        <link rel="icon" type="icon/png" href="../image/favicon.png" />
+        <link rel="stylesheet" href="../css/article-admin.css">
+        <link rel="stylesheet" href="../css/header.css">
+        <link rel="stylesheet" href="../css/footer.css">
+        <script src="https://cdn.tiny.cloud/1/m0gqn8z8i7gl3anz183r2jfo4tcxevfvmuwze7yv2tzrmb7y/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+        <title>Article - Univership</title>
+    </head>
+    <body id="upper-view">
+        <main id="view">
+            <a href="list-article.html" aria-label=""><button class="back">Retour à l'accueil</button></a>
+            <button class="edit-button"><img src="../image/icon/edit.png" alt="edition"></button>
+            <button class="view-button"><img src="../image/icon/eye.png" alt="edition"></button>
+            <section class="view-title">
+                <img src="" alt="" id="img">
+                <h1 id="title"></h1>
+                <span class="under"></span>
+            </section>
+            <section class="view-infos">
+                <div class="view-infos-cont">
+                    <p id="category">Catégorie : &nbsp;<span id="category-value"></span>
+                    </p>
+
+                    <div id="visibility">
+                        <img src="../image/icon/eye.png" alt="" class="img-public">
+                        <img src="../image/icon/no_eye.png" alt="" class="img-private">
+                        <p class="visibility-value"></p>
+                    </div>
+                </div>
+                <p>Date de création : 
+                    <b id="date"></b>
+                </p>
+            </section>
+            <section class="view-content">
+                <article id="content" class="content mce-content-body"  style="position: relative;" spellcheck="false">
+                </article>
+            </section>
+        </main>
+        <script src="js/view-article.js"></script>
+    </body>
+</html>

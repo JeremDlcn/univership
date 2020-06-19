@@ -79,6 +79,14 @@ a:hover {
 	margin-bottom: 8rem;
 }
 
+#highlighted p {
+	display: -webkit-box;
+	-webkit-line-clamp: 7;
+	-webkit-box-orient: vertical;  
+	overflow: hidden;
+}
+
+
 #highlighted img {
 	width: 40%;
 }
@@ -101,7 +109,7 @@ a:hover {
 	justify-content: space-between;
 }
 
-#side div{
+#side a{
 	width: 25%;
 }
 
@@ -113,6 +121,13 @@ a:hover {
 
 #side img {
 	width: 100%;
+}
+
+#side .front-content {
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;  
+	overflow: hidden;
 }
 
 

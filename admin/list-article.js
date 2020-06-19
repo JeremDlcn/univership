@@ -35,7 +35,6 @@ function createContent(row) {
 
   //lien vers l'article selon l'id
   link.href = `article.html?id=${row.id}`;
-  console.log(row.id);
   
   div.className = 'article';
   div.setAttribute("nb", row.id);
@@ -50,9 +49,7 @@ function createContent(row) {
   date.innerHTML = row.date;
   if (row.content.includes('<img')){
     let contentful = row.content.replace(/<img([^>]*)>/gi, "")
-    console.log(row.content);
     content.innerHTML = contentful
-    console.log(contentful);
   } else {
     content.innerHTML = row.content;
   }

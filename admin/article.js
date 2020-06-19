@@ -22,7 +22,6 @@ fetch(`https://univership.herokuapp.com/article/${urlID}`, {
 })
   .then(r => r.json())
   .then(data => {
-      console.log(data);
       normalContent = data.content;
       setInfos(data)
   });
