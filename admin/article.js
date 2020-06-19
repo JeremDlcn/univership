@@ -60,6 +60,8 @@ function disableEditor() {
   document.querySelector('#visibility').style.display = 'block';
   document.querySelector('#title').style.display = 'block';
   document.querySelector('#edit-title').style.display = 'none';
+  document.querySelector('.floating-input').style.display = 'none';
+  document.querySelector('.adding-image img').style.filter = '';
   document.querySelector('#edit-category').style.display = 'none';
   document.querySelector('#edit-visibility').style.display = 'none';
   document.querySelector('label').style.display = 'none';
@@ -120,6 +122,7 @@ document.querySelector('.view-button').addEventListener('click', ()=>{
 document.querySelector('.save-button').addEventListener('click', ()=>{
   let catC = document.querySelector('#edit-category');
   let cat = catC.options[catC.selectedIndex].value;
+  let img = document.querySelector('#img-input').value;
   let visib = document.querySelector('#edit-visibility').value;
   let cont = tinymce.activeEditor.getContent();
   disableEditor();
@@ -127,6 +130,7 @@ document.querySelector('.save-button').addEventListener('click', ()=>{
   document.querySelector('#title').innerHTML = document.querySelector('#edit-title').value;
   document.querySelector('#category-value').innerHTML = cat;
   document.querySelector('#content').innerHTML = cont;
+  document.querySelector('#img').src = img;
   edit();
 });
 
