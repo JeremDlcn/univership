@@ -48,7 +48,15 @@ function createContent(row) {
   div3.className = 'corps';
   title.innerHTML = row.title;
   date.innerHTML = row.date;
-  content.innerHTML = row.content;
+  if (row.content.includes('<img')){
+    let contentful = row.content.replace(/<img([^>]*)>/gi, "")
+    console.log(row.content);
+    content.innerHTML = contentful
+    console.log(contentful);
+  } else {
+    content.innerHTML = row.content;
+  }
+  
   content.className = 'content-article'
   div4.className = 'tools';
   figure.className = 'visib'

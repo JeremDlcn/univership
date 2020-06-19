@@ -135,7 +135,10 @@ a:hover {
     position: relative;
 }
 #content {
-    outline: none;
+	outline: none;
+}
+#content img {
+	max-width: 100%;
 }
 .create-content {
 	border-bottom: 2px solid var(--purple);
@@ -189,6 +192,7 @@ a:hover {
 	bottom: 4rem;
 	right: 6rem;
 	cursor: pointer;
+	z-index: 5;
 }
 
 .view-button {
