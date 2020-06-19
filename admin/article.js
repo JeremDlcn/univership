@@ -30,7 +30,8 @@ fetch(`https://univership.herokuapp.com/article/${urlID}`, {
   function setInfos(data) {
     document.querySelector('#title').innerHTML = data.title;
     document.querySelector('#edit-title').value = data.title;
-    document.querySelector('#category-value').innerHTML = data.category;
+    let categ = getCategory(data.category);
+    document.querySelector('#category-value').innerHTML = categ;
     document.querySelector('#edit-category').value = data.category;
     document.querySelector('#date').innerHTML = data.date;
     document.querySelector('#content').innerHTML = data.content;
@@ -38,10 +39,11 @@ fetch(`https://univership.herokuapp.com/article/${urlID}`, {
     
     // image de l'article
     if (data.img == ''){
-      document.querySelector('#img').src = '../image/spot.png'
+      document.querySelector('#img').src = '../image/spot.png';
     }
     else {
       document.querySelector('#img').src = data.img;
+      document.querySelector('#img-input').value = data.img;
     }
   };
 
@@ -68,11 +70,13 @@ function enableEditor() {
   document.querySelector('#category').style.display = 'none';
   document.querySelector('#visibility').style.display = 'none';
   document.querySelector('#title').style.display = 'none';
+  document.querySelector('#edit-img').style.display = 'flex';
   document.querySelector('#edit-title').style.display = 'block';
   document.querySelector('#edit-category').style.display = 'initial';
   document.querySelector('#edit-visibility').style.display = 'initial';
   document.querySelector('label').style.display = 'block';
   document.querySelector('label:last-of-type').style.display = 'block';
+  document.querySelector('.adding-image img').style.filter = 'brightness(50%)';
 }
 
 function defineVisibility(data) {
@@ -115,7 +119,7 @@ document.querySelector('.view-button').addEventListener('click', ()=>{
 // save changes
 document.querySelector('.save-button').addEventListener('click', ()=>{
   let catC = document.querySelector('#edit-category');
-  let cat = catC.options[catC.selectedIndex].text;
+  let cat = catC.options[catC.selectedIndex].value;
   let visib = document.querySelector('#edit-visibility').value;
   let cont = tinymce.activeEditor.getContent();
   disableEditor();
@@ -147,4 +151,19 @@ function edit() {
               visibility: visibility
           })
       })
+}
+
+function getCategory(data) {
+  switch (data) {
+    case 'maj':
+      return 'Mise à Jour';
+    case 'encours':
+      return 'En cours de développement';
+    case 'news':
+      return 'News';
+    case 'maintenance':
+      return 'Maintenance';
+    default:
+      return 'Mise à Jour';
+  }
 }

@@ -46,7 +46,8 @@ function createContent(row) {
   }
   div3.className = 'corps';
   title.innerHTML = row.title;
-  date.innerHTML = row.date;
+  let categ = getCategory(row.category);
+  date.innerHTML = row.date + " - " + categ;
   if (row.content.includes('<img')){
     let contentful = row.content.replace(/<img([^>]*)>/gi, "")
     content.innerHTML = contentful
@@ -137,5 +138,21 @@ function edit() {
       const art = arEdit[i].parentElement.parentElement.parentElement.getAttribute("nb");
       window.location.href = `article.html?id=${art}`;
     })
+  }
+}
+
+
+function getCategory(data) {
+  switch (data) {
+    case 'maj':
+      return 'Mise à Jour';
+    case 'encours':
+      return 'En cours de développement';
+    case 'news':
+      return 'News';
+    case 'maintenance':
+      return 'Maintenance';
+    default:
+      return 'Mise à Jour';
   }
 }

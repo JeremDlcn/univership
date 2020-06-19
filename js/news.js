@@ -92,7 +92,6 @@ function getCategory(data) {
     default:
       return 'Mise à Jour';
   }
-  
 }
 
 function displayCategory(cat){
