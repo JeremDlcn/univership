@@ -136,7 +136,7 @@ function edit() {
       let title = document.querySelector('#edit-title').value
       let category = document.querySelector('#category-value').innerHTML;
       let content = document.querySelector('#content').innerHTML;
-      let img = document.querySelector('#img').src;
+      let img = document.querySelector('#img-input').value;
       let visibility = document.querySelector('.visibility-value').innerHTML;
 
       //envoyer les informations vers le fetch d'édition
