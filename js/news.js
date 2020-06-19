@@ -9,9 +9,9 @@ fetch(`https://univership.herokuapp.com/`, {
     data.sort((a, b) => parseFloat(b.id) - parseFloat(a.id));
     let array = [];
     for (let i = 0; i < data.length; i++) {
-      createContent(data[i]);
       if (i < 4) {
         array.push(data[i]);
+        createContent(data[i]);
       } 
     }
     frontContent(array);
@@ -41,7 +41,8 @@ function createContent(data) {
     img.src = '../image/news/news1.png';
   }
   title.innerHTML = data.title;
-  date.innerHTML = data.date;
+  let categ = getCategory(data.category);
+  date.innerHTML = data.date + " - " + categ;
   if (data.content.includes('<img')){
     let contentful = data.content.replace(/<img([^>]*)>/gi, "")
     content.innerHTML = contentful
@@ -78,4 +79,65 @@ function frontContent(array) {
 }
 
 
+function getCategory(data) {
+  switch (data) {
+    case 'maj':
+      return 'Mise à Jour';
+    case 'encours':
+      return 'En cours de développement';
+    case 'news':
+      return 'News';
+    case 'maintenance':
+      return 'Maintenance';
+    default:
+      return 'Mise à Jour';
+  }
+  
+}
 
+async function displayAll(){
+    // récupération des articles
+    fetch(`https://univership.herokuapp.com/`, {
+      method: "GET"
+    })
+    .then(r => r.json())
+    .then(data => {
+      data.sort((a, b) => parseFloat(b.id) - parseFloat(a.id));
+      document.querySelector('#list').innerHTML = "";
+      for (let i = 0; i < data.length; i++) {
+          createContent(data[i]);
+      }
+    })
+    document.querySelector('#more').style.display = "none";
+    console.log('fini');
+    
+}
+
+
+document.querySelector('#more').addEventListener('click', ()=>{
+  displayAll();
+});
+
+
+// Sorting buttons
+document.querySelector('#full').addEventListener('click', ()=>{
+  displayAll();
+});
+
+
+
+document.querySelector('#news').addEventListener('click', async ()=>{
+
+});
+
+document.querySelector('#maj').addEventListener('click', ()=>{
+  
+});
+
+document.querySelector('#support').addEventListener('click', ()=>{
+  
+});
+
+document.querySelector('#dev').addEventListener('click', ()=>{
+  
+});

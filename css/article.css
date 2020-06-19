@@ -149,7 +149,6 @@ a:hover {
 	border: none;
 	color: var(--main-font);
 	padding: 10px 15px;
-	font-size: 1.2rem;
 	margin-right: 1rem;
 	margin-bottom: 1rem;
 }
@@ -182,6 +181,12 @@ article img {
 article b {
 	opacity: .5;
 	font-size: .8rem;
+}
+#list p {
+	display: -webkit-box;
+	-webkit-line-clamp: 5;
+	-webkit-box-orient: vertical;  
+	overflow: hidden;
 }
 
 #all section:last-of-type {
