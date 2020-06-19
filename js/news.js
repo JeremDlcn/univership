@@ -95,9 +95,9 @@ function getCategory(data) {
   
 }
 
-async function displayAll(){
+function displayCategory(cat){
     // récupération des articles
-    fetch(`https://univership.herokuapp.com/`, {
+    fetch(`https://univership.herokuapp.com/public/all${cat}`, {
       method: "GET"
     })
     .then(r => r.json())
@@ -115,29 +115,29 @@ async function displayAll(){
 
 
 document.querySelector('#more').addEventListener('click', ()=>{
-  displayAll();
+  displayCategory('all');
 });
 
 
 // Sorting buttons
 document.querySelector('#full').addEventListener('click', ()=>{
-  displayAll();
+  displayCategory('all');
 });
 
 
 
 document.querySelector('#news').addEventListener('click', async ()=>{
-
+  displayCategory('news');
 });
 
 document.querySelector('#maj').addEventListener('click', ()=>{
-  
+  displayCategory('maj');
 });
 
 document.querySelector('#support').addEventListener('click', ()=>{
-  
+  displayCategory('maintenance');
 });
 
 document.querySelector('#dev').addEventListener('click', ()=>{
-  
+  displayCategory('encours');
 });
