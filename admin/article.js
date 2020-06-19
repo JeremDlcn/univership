@@ -60,8 +60,8 @@ function disableEditor() {
   document.querySelector('#visibility').style.display = 'block';
   document.querySelector('#title').style.display = 'block';
   document.querySelector('#edit-title').style.display = 'none';
-  document.querySelector('.floating-input').style.display = 'none';
-  document.querySelector('.adding-image img').style.filter = '';
+  document.querySelector('#edit-img').style.display = 'none';
+  document.querySelector('.adding-image img').style.filter.remove();
   document.querySelector('#edit-category').style.display = 'none';
   document.querySelector('#edit-visibility').style.display = 'none';
   document.querySelector('label').style.display = 'none';
