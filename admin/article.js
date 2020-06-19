@@ -16,6 +16,34 @@ let contentmce = {
     inline: true
 };
 
+// récupération des informations de article
+fetch(`https://univership.herokuapp.com/article/${urlID}`, {
+  method: "GET"
+})
+  .then(r => r.json())
+  .then(data => {
+      console.log(data);
+      normalContent = data.content;
+      setInfos(data)
+  });
+
+
+  function setInfos(data) {
+    document.querySelector('#title').innerHTML = data.title;
+    document.querySelector('#edit-title').value = data.title;
+    document.querySelector('#category-value').innerHTML = data.category;
+    document.querySelector('#date').innerHTML = data.date;
+    document.querySelector('#content').innerHTML = data.content;
+    defineVisibility(data.visibility);
+    
+    // image de l'article
+    if (data.img == ''){
+      document.querySelector('#img').src = '../image/spot.png'
+    }
+    else {
+      document.querySelector('#img').src = data.img;
+    }
+  };
 
 //functions to edit mode
 function disableEditor() {
@@ -85,49 +113,37 @@ document.querySelector('.view-button').addEventListener('click', ()=>{
 
 // save changes
 document.querySelector('.save-button').addEventListener('click', ()=>{
-  let cont = tinymce.activeEditor.getContent();
   let catC = document.querySelector('#edit-category');
   let cat = catC.options[catC.selectedIndex].text;
   let visib = document.querySelector('#edit-visibility').value;
-  console.log(cont);
+  let cont = tinymce.activeEditor.getContent();
   disableEditor();
+  defineVisibility(visib);
   document.querySelector('#title').innerHTML = document.querySelector('#edit-title').value;
   document.querySelector('#category-value').innerHTML = cat;
-  defineVisibility(visib);
   document.querySelector('#content').innerHTML = cont;
+  edit();
 });
 
 
 
+function edit() { 
+      let title = document.querySelector('#edit-title').value
+      let category = document.querySelector('#category-value').innerHTML;
+      let content = document.querySelector('#content').innerHTML;
+      let img = document.querySelector('#img').src;
+      let visibility = document.querySelector('.visibility-value').innerHTML;
 
-
-
-
-// récupération des informations de article
-fetch(`https://univership.herokuapp.com/article/${urlID}`, {
-  method: "GET"
-})
-  .then(r => r.json())
-  .then(data => {
-      console.log(data);
-      normalContent = data.content;
-      setInfos(data)
-  });
-
-
-  function setInfos(data) {
-    document.querySelector('#title').innerHTML = data.title;
-    document.querySelector('#edit-title').value = data.title;
-    document.querySelector('#category-value').innerHTML = data.category;
-    document.querySelector('#date').innerHTML = data.date;
-    document.querySelector('#content').innerHTML = data.content;
-    defineVisibility(data.visibility);
-    
-    // image de l'article
-    if (data.img == ''){
-      document.querySelector('#img').src = '../image/spot.png'
-    }
-    else {
-      document.querySelector('#img').src = data.img;
-    }
-  };
+      //envoyer les informations vers le fetch d'édition
+      fetch(`https://univership.herokuapp.com/edit/${urlID}`,{
+          method: "POST",
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+              title: title,
+              category: category,
+              content: content,
+              img: img,
+              visibility: visibility
+          })
+      })
+}
