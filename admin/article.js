@@ -32,6 +32,7 @@ fetch(`https://univership.herokuapp.com/article/${urlID}`, {
     document.querySelector('#title').innerHTML = data.title;
     document.querySelector('#edit-title').value = data.title;
     document.querySelector('#category-value').innerHTML = data.category;
+    document.querySelector('#edit-category').value = data.category;
     document.querySelector('#date').innerHTML = data.date;
     document.querySelector('#content').innerHTML = data.content;
     defineVisibility(data.visibility);
@@ -78,6 +79,7 @@ function enableEditor() {
 function defineVisibility(data) {
     // visibilité de l'article
     document.querySelector('.visibility-value').innerHTML = data;
+    document.querySelector('#edit-visibility').value = data;
     if (data === 'public') {
       document.querySelector('.img-public').style.display = 'block';
       document.querySelector('.img-private').style.display = 'none';
