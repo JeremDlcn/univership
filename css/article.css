@@ -70,7 +70,7 @@ a:hover {
 }
 
 
-#spotlight > section {
+#spotlight > section, #spotlight > section > a {
 	display: flex;
 	flex-direction: row;
 }
