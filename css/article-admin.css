@@ -70,7 +70,7 @@ a:hover {
 
 .view-title img {
 	width: 100%;
-	height: 50vh;
+	height: 25rem;
 	object-fit: cover;
 	border-radius: 5px;
 }
@@ -97,8 +97,11 @@ a:hover {
 	justify-content: space-between;
 	margin-bottom: 2rem;
 }
-.view-infos div {
+.view-infos-cont {
 	margin: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
 }
 
 .view-content {
@@ -115,6 +118,17 @@ a:hover {
 }
 #visibility {
 	font-weight: bold;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 1.5rem;
+	filter: invert(37%) sepia(82%) saturate(507%) hue-rotate(215deg) brightness(65%) contrast(92%);
+}
+#visibility img{
+	height: 2rem;
+}
+.img-public, .img-private {
+	display: none;
 }
 
 
@@ -159,6 +173,39 @@ a:hover {
 	width: 42%;
 	margin-top: 5px;
 }
+
+select {
+	background-color: var(--medium-gray);
+	color: var(--main-font);
+	padding: .5rem .7rem;
+	border: none;
+}
+
+.view-infos-cont label{
+	display: none;
+}
+#edit-title {
+	display: none;
+	width: 100%;
+	text-align: center;
+	font-size: 2rem;
+	background-color: transparent;
+	color: var(--main-font);
+	border: none;
+	padding: .7rem 0;
+	outline: none;
+	font-family: inherit;
+	font-weight: bold;
+	margin: 4rem 0 1rem 0;
+}
+#edit-category {
+	display: none;
+	margin-bottom: 2rem;
+}
+#edit-visibility {
+	display: none;
+}
+
 
 .save-button {
 	background-color: var(--purple);

@@ -20,15 +20,34 @@
             <section class="view-title">
                 <img src="" alt="" id="img">
                 <h1 id="title"></h1>
+                <input type="text" id="edit-title" value="">
                 <span class="under"></span>
             </section>
             <section class="view-infos">
-                <div>
+                <div class="view-infos-cont">
                     <p id="category">Catégorie : &nbsp;<span id="category-value"></span>
                     </p>
-                    <div id="visibility"></div>
+                    <label for="edit-category">Modifier la catégorie</label>
+                    <select name="Catégorie" id="edit-category">
+                        <option value="maj">Mise à Jour</option>
+                        <option value="encours">En cours de développement</option>
+                        <option value="news">News</option>
+                        <option value="maintenance">Maintenance</option>
+                    </select>
+                    <div id="visibility">
+                        <img src="../image/icon/eye.png" alt="" class="img-public">
+                        <img src="../image/icon/no_eye.png" alt="" class="img-private">
+                        <p class="visibility-value"></p>
+                    </div>
+                    <label for="edit-visibility">Modifier la visibilité de l'article</label>
+                    <select name="Visibilité" id="edit-visibility">
+                        <option value="public">Public</option>
+                        <option value="private" selected>Privé</option>
+                    </select>
                 </div>
-                <b id="date"></b>
+                <p>Date de création : 
+                    <b id="date"></b>
+                </p>
             </section>
             <section class="view-content">
                 <article id="content" class="content mce-content-body"  style="position: relative;" spellcheck="false">
