@@ -61,7 +61,7 @@ function disableEditor() {
   document.querySelector('#title').style.display = 'block';
   document.querySelector('#edit-title').style.display = 'none';
   document.querySelector('#edit-img').style.display = 'none';
-  document.querySelector('.adding-image img').style.filter.remove();
+  document.querySelector('.adding-image img').style.filter = null;
   document.querySelector('#edit-category').style.display = 'none';
   document.querySelector('#edit-visibility').style.display = 'none';
   document.querySelector('label').style.display = 'none';
