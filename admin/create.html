@@ -14,21 +14,21 @@
     </head>
     <body id="upper-view">
         <main id="view">
-            <a href="list-article.html" aria-label=""><button class="back">Retour à l'accueil</button></a>
-            <button class="edit-button"><img src="../image/icon/edit.png" alt="edition"></button>
-            <button class="view-button"><img src="../image/icon/eye.png" alt="edition"></button>
             <section class="view-title">
-                <img src="" alt="" id="img">
-                <h1 id="title"></h1>
-                <input type="text" id="edit-title" value="">
+                <div class="adding-image">
+                    <div class="floating-input">
+                        <label for="create-img">Ajouter l'url d'une image</label>
+                        <input type="text" id="create-img" value="">
+                    </div>
+                    <img src="" alt="" id="img" class="create-img">
+                </div>
+                <input type="text" id="create-title" value="" placeholder="Titre de l'article">
                 <span class="under"></span>
             </section>
             <section class="view-infos">
-                <div class="view-infos-cont">
-                    <p id="category">Catégorie : &nbsp;<span id="category-value"></span>
-                    </p>
-                    <label for="edit-category">Modifier la catégorie</label>
-                    <select name="Catégorie" id="edit-category">
+                <div class="view-infos-container">
+                    <label for="create-category">Modifier la catégorie</label>
+                    <select name="Catégorie" id="create-category">
                         <option value="maj">Mise à Jour</option>
                         <option value="encours">En cours de développement</option>
                         <option value="news">News</option>
@@ -39,24 +39,22 @@
                         <img src="../image/icon/no_eye.png" alt="" class="img-private">
                         <p class="visibility-value"></p>
                     </div>
-                    <label for="edit-visibility">Modifier la visibilité de l'article</label>
-                    <select name="Visibilité" id="edit-visibility">
+                    <label for="create-visibility">Modifier la visibilité de l'article</label>
+                    <select name="Visibilité" id="create-visibility">
                         <option value="public">Public</option>
                         <option value="private" selected>Privé</option>
                     </select>
                 </div>
-                <p>Date de création : 
-                    <b id="date"></b>
-                </p>
             </section>
             <section class="view-content">
-                <article id="content" class="content mce-content-body"  style="position: relative;" spellcheck="false">
+                <article id="content" class="content create-content mce-content-body" contenteditable="true" style="position: relative;" spellcheck="false">
                 </article>
             </section>
             <section>
-                <button type="submit" class="save-button save-edit"><img src="../image/icon/save.png" alt=""> Enregistrer</button>
+                <button type="submit" class="save-button"><img src="../image/icon/save.png" alt=""> Crée l'article</button>
             </section>
+            <a href="list-article.html" aria-label=""><button class="back">Retour à l'accueil</button></a>
         </main>
-        <script src="article.js"></script>
+        <script src="create.js"></script>
     </body>
 </html>

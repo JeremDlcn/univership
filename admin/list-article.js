@@ -129,7 +129,7 @@ function edit() {
   for (let i = 0; i < arEdit.length; i++) {
     arEdit[i].addEventListener('click', () => {
       const art = arEdit[i].parentElement.parentElement.parentElement.getAttribute("nb");
-      window.location.href = `edit-article.html?id=${art}`;
+      window.location.href = `article.html?id=${art}`;
     })
   }
 }
