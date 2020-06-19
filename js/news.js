@@ -97,7 +97,7 @@ function getCategory(data) {
 
 function displayCategory(cat){
     // récupération des articles
-    fetch(`https://univership.herokuapp.com/public/all${cat}`, {
+    fetch(`https://univership.herokuapp.com/public/${cat}`, {
       method: "GET"
     })
     .then(r => r.json())
