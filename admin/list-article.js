@@ -4,6 +4,7 @@ fetch(`https://univership.herokuapp.com/list`, {
 })
   .then(r => r.json())
   .then(data => {
+    data.sort((a, b) => parseFloat(b.id) - parseFloat(a.id));
     for (let i = 0; i < data.length; i++) {
       createContent(data[i]);
     }
