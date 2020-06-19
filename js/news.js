@@ -65,7 +65,6 @@ function createContent(data) {
 
 
 function frontContent(array) {
-    console.log(array);
     let link =  document.querySelectorAll('.front-link');
     let img =  document.querySelectorAll('.front-img');
     let title = document.querySelectorAll('.front-title');
@@ -75,7 +74,8 @@ function frontContent(array) {
         img[i].src = array[i].img;
         title[i].innerHTML = array[i].title;
         content[i].innerHTML = array[i].content;
-    }
-
-    
+    }    
 }
+
+
+

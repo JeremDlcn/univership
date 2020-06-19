@@ -129,6 +129,9 @@ a:hover {
 	-webkit-box-orient: vertical;  
 	overflow: hidden;
 }
+.front-img {
+	background-color: var(--medium-gray);
+}
 
 
 /*History*/
