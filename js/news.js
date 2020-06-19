@@ -103,13 +103,12 @@ function displayCategory(cat){
     .then(data => {
       data.sort((a, b) => parseFloat(b.id) - parseFloat(a.id));
       document.querySelector('#list').innerHTML = "";
+      if (data.length === 0) document.querySelector('#list').innerHTML = "Aucun article dans cette catégorie";
       for (let i = 0; i < data.length; i++) {
           createContent(data[i]);
       }
     })
     document.querySelector('#more').style.display = "none";
-    console.log('fini');
-    
 }
 
 
