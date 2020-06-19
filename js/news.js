@@ -1,7 +1,7 @@
 
 
 // récupération des articles
-fetch(`https://univership.herokuapp.com/`, {
+fetch(`https://univership.herokuapp.com/public/all`, {
   method: "GET"
 })
   .then(r => r.json())
