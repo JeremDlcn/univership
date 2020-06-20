@@ -15,7 +15,7 @@ document.querySelector('#send').addEventListener('click', ()=>{
     })
     .then(r => r.json())
     .then(res => {
-        if ('error' in res) {
+        if (res.error !== undefined) {
             if (res.error === 'wrong mail') showError("Mauvaise adresse mail");
             if (res.error === 'wrong password') showError("Mauvais mot de passe");
         } else {
