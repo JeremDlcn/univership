@@ -73,6 +73,9 @@ function frontContent(array) {
     for (let i = 0; i < array.length; i++){
         link[i].href = `article.html?id=${array[i].id}`;
         img[i].src = array[i].img;
+        if (!img[i].src) {
+          img[i].src = 'https://univership.netlify.app/image/news/news1.png';
+        }
         title[i].innerHTML = array[i].title;
         content[i].innerHTML = array[i].content;
     }    

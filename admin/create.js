@@ -29,6 +29,10 @@ document.querySelector('button').addEventListener('click', () => {
     let category = document.querySelector('#create-category').value;
     let img = document.querySelector('#create-img').value;
     let visibility = document.querySelector('#create-visibility').value;
+    // image de l'article
+    if (img == ''){
+        img = 'https://univership.netlify.app/image/news/news1.png';
+    }
 
 
     //envoi des informations du nouvelle article au serveur

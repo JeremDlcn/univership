@@ -39,7 +39,7 @@ fetch(`https://univership.herokuapp.com/article/${urlID}`, {
     
     // image de l'article
     if (data.img == ''){
-      document.querySelector('#img').src = '../image/spot.png';
+      document.querySelector('#img').src = 'https://univership.netlify.app/image/news/news1.png';
     }
     else {
       document.querySelector('#img').src = data.img;

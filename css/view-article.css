@@ -93,17 +93,41 @@ a:hover {
 	background-color: var(--dark-gray);
 	border: none;
 	height: 2rem;
-	margin-top: .5rem;
 	padding: .5rem .7rem;
 	color: white;
+	outline: none;
 }
 
 #edit-img {
 	display: none;
 }
+.floating-input label {
+	margin-bottom: .5rem;
+}
+
 .create-img {
 	background-color: var(--medium-gray);
 	display: block;
+}
+.separe {
+	margin: .7rem 0;
+	font-size: .8rem;
+	font-weight: bold;
+	padding-left: .5rem;
+}
+#upload-img {
+	visibility: hidden;
+	height: 1px;
+	width: 1px;
+}
+
+.button-upload {
+	background-color: var(--purple);
+	align-self: flex-start;
+	padding: .5rem .7rem;
+	font-size: .8rem;
+	font-weight: bold;
+	cursor: pointer;
 }
 
 .view-title h1 {
@@ -185,6 +209,7 @@ a:hover {
 	top: 2rem;
 	left: 2rem;
 	cursor: pointer;
+	z-index: 5;
 }
 
 
