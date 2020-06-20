@@ -469,7 +469,7 @@ progress::-ms-fill {
 }
 .bend input{
 	transform: skewX(15deg);
-	background-color: var(--medium-gray)!important;
+	background-color: transparent!important;
 	border: none;
 	font-size: 1.2rem;
 	color: var(--main-font);
@@ -480,7 +480,7 @@ input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active  {
 	-webkit-text-fill-color: #fff !important;
-    transition: background-color 100s;
+    transition: background-color 600s cubic-bezier(1,0,1,0);
 }
 
 
