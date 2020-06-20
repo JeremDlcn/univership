@@ -13,10 +13,24 @@ document.querySelector('#send').addEventListener('click', ()=>{
             password: pass
         })
     })
-    .then((res)=>{
-        console.log(res);
+    .then(r => r.json())
+    .then(res => {
+        if ('error' in res) {
+            if (res.error === 'wrong mail') showError("Mauvaise adresse mail");
+            if (res.error === 'wrong password') showError("Mauvais mot de passe");
+        } else {
+            localStorage.setItem('token', res);
+        }
+
+        
+
     })
 
 
 });
 
+function showError(text) {
+    document.querySelector('#error').textContent = '';
+    document.querySelector('.error').style.display = 'block';
+    document.querySelector('#error').textContent = text;
+}

@@ -479,6 +479,7 @@ progress::-ms-fill {
 	background-color: red;
 	transform: skewX(15deg);
 	padding: .7rem 1rem;
+		display: none;
 }
 .error p {
 	transform: skewX(-15deg);
