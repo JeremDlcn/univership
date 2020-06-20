@@ -78,7 +78,7 @@ function enableEditor() {
   document.querySelector('#edit-visibility').style.display = 'initial';
   document.querySelector('label').style.display = 'block';
   document.querySelector('label:last-of-type').style.display = 'block';
-  document.querySelector('.adding-image img').style.filter = 'brightness(50%)';
+  document.querySelector('.adding-image img').style.filter = 'brightness(120%) blur(3px)';
 }
 
 function defineVisibility(data) {
