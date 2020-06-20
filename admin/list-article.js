@@ -1,6 +1,10 @@
 // récupération des articles
 fetch(`https://univership.herokuapp.com/list`, {
-  method: "GET"
+  method: "GET",
+  headers: { 
+    'Authorization': 'Bearer ' + localStorage.getItem('token'),
+    'Content-Type': 'application/json'
+  }
 })
   .then(r => r.json())
   .then(data => {
@@ -104,7 +108,7 @@ function del() {
       pop();
       document.querySelector('dialog').showModal();
       document.querySelector('#yes').addEventListener('click', ()=>{
-        fetch(`https://univership.herokuapp.com/delete/${art.getAttribute("nb")}`, {
+        fetch(`https://univership.herokuapp.com/article/delete/${art.getAttribute("nb")}`, {
           method: "DELETE"
         })
         art.remove();

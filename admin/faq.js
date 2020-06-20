@@ -37,7 +37,10 @@ function create() {
         //envoi des informations du nouvelle article au serveur
         fetch(`https://univership.herokuapp.com/faq/create`, {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
+            headers: { 
+                'Authorization': 'Bearer ' + localStorage.getItem('token'),
+                'Content-Type': 'application/json'
+            },
             body: JSON.stringify({
                 question: question,
                 answer: answer
@@ -66,9 +69,12 @@ function edit(ID) {
 	        let category = document.querySelector('#faq-text').value;
 
             //envoyer les informations vers le fetch d'édition
-            fetch(`https://univership.herokuapp.com/edit/${data.id}`,{
+            fetch(`https://univership.herokuapp.com/faq/edit/${data.id}`,{
                 method: "POST",
-                headers: { 'Content-Type': 'application/json' },
+                headers: { 
+                    'Authorization': 'Bearer ' + localStorage.getItem('token'),
+                    'Content-Type': 'application/json'
+                },
                 body: JSON.stringify({
                     question: question,
                 	answer: answer

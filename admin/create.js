@@ -31,15 +31,6 @@ tinymce.init(contentmce);
 
 
 
-
-
-
-
-
-
-
-
-
 /*
 Création d'article
 */
@@ -67,9 +58,12 @@ document.querySelector('button').addEventListener('click', () => {
 
 
     //envoi des informations du nouvelle article au serveur
-    fetch(`https://univership.herokuapp.com/create`, {
+    fetch(`https://univership.herokuapp.com/article/create`, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 
+            'Authorization': 'Bearer ' + localStorage.getItem('token'),
+            'Content-Type': 'application/json'
+        },
         body: JSON.stringify({
             title: title,
             category: category,

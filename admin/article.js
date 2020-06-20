@@ -144,9 +144,12 @@ function edit() {
       let visibility = document.querySelector('.visibility-value').innerHTML;
 
       //envoyer les informations vers le fetch d'édition
-      fetch(`https://univership.herokuapp.com/edit/${urlID}`,{
+      fetch(`https://univership.herokuapp.com/article/edit/${urlID}`,{
           method: "POST",
-          headers: { 'Content-Type': 'application/json' },
+          headers: { 
+            'Authorization': 'Bearer ' + localStorage.getItem('token'),
+            'Content-Type': 'application/json'
+          },
           body: JSON.stringify({
               title: title,
               category: category,
