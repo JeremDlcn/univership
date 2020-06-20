@@ -27,21 +27,27 @@
             <img src="image/logo.png">
         </a>
         <button>
-            <img src="image/icon/home.png" />Return to Home
+            <img src="image/icon/home.png" />Retour
         </button>
     </header>
     <main>
-        <h1>Connexion</h1>
-        <div>
-            <div class="error">
-                <p>Mot de passe inconnu</p>
+        <section class="connect">
+            <h1 class="connect-title">Connexion</h1>
+            <div>
+                <div class="error">
+                    <p>Mot de passe inconnu</p>
+                </div>
+                    <div class="bend">
+                        <input type="mail" autocomplete="username email" placeholder="Adresse mail" id="mail">
+                    </div>
+                    <div class="bend">
+                        <input type="password" autocomplete="current-password" placeholder="Mot de passe" id="password">
+                    </div>
+                <button id="send">Connexion</button>
             </div>
-            <div class="bend"><input type="text" placeholder="Identifiant"></div>
-            <div class="bend"><input type="password" name="password" placeholder="Mot de passe"></div>
-            <button>Connexion</button>
-        </div>
-
+        </section>
     </main>
+    <script src="js/connect.js"></script>
 </body>
 
 </html>

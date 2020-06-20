@@ -406,9 +406,17 @@ progress::-ms-fill {
 	padding: 0 2rem;
 }
 
-#connect main {
+.connect{
+	max-width: 500px;
 	justify-content: space-between;
+}
+
+#connect main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	height: 80%;
+	padding: 0!important;
 }
 
 #connect button{
@@ -437,15 +445,20 @@ progress::-ms-fill {
 }
 
 
-#connect main > div{
+.connect > div{
 	display: flex;
 	flex-direction: column;
-	
 }
 
 #connect main input {
 	min-width: 30vw;
 	outline: none;
+}
+
+.connect-title {
+	text-align: center;
+	font-size: 3rem;
+	margin-bottom: 4rem;
 }
 
 .bend {
