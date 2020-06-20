@@ -20,13 +20,9 @@ document.querySelector('#send').addEventListener('click', ()=>{
             if (res.error === 'wrong password') showError("Mauvais mot de passe");
         } else {
             localStorage.setItem('token', res);
+            window.location.href = "/admin/list-article.html"
         }
-
-        
-
     })
-
-
 });
 
 function showError(text) {
