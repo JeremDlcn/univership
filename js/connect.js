@@ -14,7 +14,7 @@ document.querySelector('#send').addEventListener('click', ()=>{
         })
     })
     .then((res)=>{
-        console.log(res.status);
+        console.log(res);
     })
 
 
