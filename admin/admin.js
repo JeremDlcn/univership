@@ -2,7 +2,7 @@
 //Affichage du nom d'utilisateur
 const adminName = localStorage.getItem('name');
 if (adminName !== null){
-    document.querySelector('.admin-name').textContent = adminName;
+    document.querySelector('.admin-name').textContent = adminName.replace("."," ");
 }
 
 // déconnexion d'un compte
