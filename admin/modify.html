@@ -15,9 +15,11 @@
 </head>
 
 <body>
-	<nav>
-		<section class="heading">
-			<a href="../index.html"><img src="../image/logo.png" alt=""></a>
+    <p id="open-admin">_<br>_<br>_</p>
+    <nav>
+        <section class="heading">
+            <a href="../index.html"><img src="../image/logo.png" alt=""></a>
+            <p id="close-admin">❌</p>
 		</section>
 		<section class="menu">
 			<div>
@@ -122,6 +124,15 @@
 		</section>
 	</main>
 	<script src="admin.js"></script>
+	<script>
+		document.querySelector('nav').style.transform = 'translateX(-100vw)';
+        document.querySelector('#close-admin').addEventListener('click', ()=>{
+            document.querySelector('nav').style.transform = 'translateX(-100vw)'
+        });
+        document.querySelector('#open-admin').addEventListener('click', ()=>{
+            document.querySelector('nav').style.transform = 'translateX(0)'
+        });
+    </script>
 </body>
 
 </html>

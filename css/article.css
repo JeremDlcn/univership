@@ -151,6 +151,7 @@ a:hover {
 	padding: 10px 15px;
 	margin-right: 1rem;
 	margin-bottom: 1rem;
+	font-size: 1rem;
 }
 
 article {
@@ -162,6 +163,7 @@ article {
 
 article > div:first-of-type {
 	width: 30%;
+	max-width: 600px;
 }
 
 article > div:last-of-type {
@@ -174,8 +176,8 @@ article > div:last-of-type {
 
 article img {
 	width: 100%;
-	max-width: 600px;
 	height: 100%;
+	object-fit: cover;
 }
 
 article b {
@@ -199,7 +201,7 @@ article b {
 
 
 @media screen and (max-width: 800px) {
-	#highlighted, #side, article {
+	#highlighted, #side, article, #spotlight > section > a {
 		flex-direction: column!important;
 		height: auto;
 		width: auto;
@@ -276,13 +278,14 @@ article b {
 /* extra large */ 
 @media (min-width: 2500px){
 	html {
-		font-size: 2rem;
+		font-size: 1.5rem;
 	}
 	.shadeDown {
 		z-index: -5;
 	}
 	article {
 		margin-bottom: 8rem;
+		height: 10rem;
 	}
 	article > div:first-of-type {
 		display: flex;

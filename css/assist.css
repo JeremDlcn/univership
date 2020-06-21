@@ -259,6 +259,7 @@ summary h2 {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	justify-content: center;
 	margin-bottom: 4rem;
 	width: 100%;
 	padding-top: 50px;
@@ -496,13 +497,7 @@ input:-webkit-autofill:active  {
 }
 /*----------------------------------------------------------------------------------------------*/
 /*-----------------------------------------Responsive-------------------------------------------*/
-
-
-@media screen and (max-width: 800px) {
-	#specs-array {
-		grid-template-columns: 50% 30% 30%;
-		font-size: 1rem;
-	}
+@media screen and (max-width: 1000px) {
 	#download {
 		flex-direction: column!important;
 		height: auto;
@@ -511,6 +506,22 @@ input:-webkit-autofill:active  {
 	#download th[colspan="2"] {
 		font-size: 1.2rem;
 		width: 210px;
+	}
+	#specs-array {
+		grid-template-columns: 50% 30% 30%;
+		font-size: 1rem;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	#connect header a, #connect header > a > img  {
+		margin-right: 0;
+	}
+	.connect {
+		padding: 0 2rem;
+	}
+	.connect-title {
+		font-size: 2rem;
 	}
 
 	#help > div {

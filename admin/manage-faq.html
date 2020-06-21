@@ -15,9 +15,11 @@
 </head>
 
 <body>
+    <p id="open-admin">_<br>_<br>_</p>
     <nav>
         <section class="heading">
-            <img src="../image/logo.png" alt="">
+            <a href="../index.html"><img src="../image/logo.png" alt=""></a>
+            <p id="close-admin">❌</p>
         </section>
         <section class="menu">
             <div>
@@ -55,18 +57,24 @@
         <section>
             <div class="question">
                 <p class="question-text">Est ce que les planètes explorables contiennent toutes des missions ?</p>
-                <div class="edit"><img src="../image/icon/edit.png" alt="edit"></div>
-                <a href="/manage-faq.html?id=1" aria-label=""><div class="delete"><img src="../image/icon/close.png" alt="delete"></div></a>
+                <div>
+                    <div class="edit"><img src="../image/icon/edit.png" alt="edit"></div>
+                    <a href="/manage-faq.html?id=1" aria-label=""><div class="delete"><img src="../image/icon/close.png" alt="delete"></div></a>
+                </div>
             </div>
             <div class="question">
                 <p class="question-text">Pourquoi seulement 5 vaisseaux de disponibles ?</p>
-                <div class="edit"><img src="../image/icon/edit.png" alt="edit"></div>
-                <div class="delete"><img src="../image/icon/close.png" alt="delete"></div>
+                <div>
+                    <div class="edit"><img src="../image/icon/edit.png" alt="edit"></div>
+                    <div class="delete"><img src="../image/icon/close.png" alt="delete"></div>
+                </div>
             </div>
             <div class="question">
                 <p class="question-text">Est ce que le jeu propose un mode histoire en coopération ?</p>
-                <div class="edit"><img src="../image/icon/edit.png" alt="edit"></div>
-                <div class="delete"><img src="../image/icon/close.png" alt="delete"></div>
+                <div>
+                    <div class="edit"><img src="../image/icon/edit.png" alt="edit"></div>
+                    <div class="delete"><img src="../image/icon/close.png" alt="delete"></div>
+                </div>
             </div>
         </section>
         <section class="faq-edit">
@@ -79,6 +87,15 @@
     </main>
     <script src="faq.js"></script>
     <script src="admin.js"></script>
+    <script>
+        document.querySelector('nav').style.transform = 'translateX(-100vw)';        
+        document.querySelector('#close-admin').addEventListener('click', ()=>{
+            document.querySelector('nav').style.transform = 'translateX(-100vw)'
+        });
+        document.querySelector('#open-admin').addEventListener('click', ()=>{
+            document.querySelector('nav').style.transform = 'translateX(0)'
+        });
+    </script>
 </body>
 
 </html>

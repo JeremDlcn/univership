@@ -297,3 +297,16 @@ select {
 }
 
 
+@media (max-width: 800px) {
+	.edit-button {
+		right: 2rem;
+	}
+	.back {
+		position: relative;
+		top: -1rem;
+		left: 0;
+	}
+	.floating-input {
+		width: 80%
+	}
+}
