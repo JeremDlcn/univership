@@ -1,3 +1,8 @@
+// récupération de l'id de l'article
+const mes = location.search.split('message=')[1];
+if (mes === 'expired') showError("Votre session à expiré, veuillez vous reconnectez");
+
+
 document.querySelector('#send').addEventListener('click', ()=>{
     const mail = document.querySelector('#mail').value;
     const pass = document.querySelector('#password').value;

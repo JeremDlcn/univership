@@ -8,10 +8,18 @@ fetch(`https://univership.herokuapp.com/list`, {
 })
   .then(r => r.json())
   .then(data => {
-    data.sort((a, b) => parseFloat(b.id) - parseFloat(a.id));
-    for (let i = 0; i < data.length; i++) {
-      createContent(data[i]);
-    }
+      console.log(data);
+      if (data.error !== undefined) {
+        console.log(data.error);
+        data.error == 'token expired' ? window.location.href = '../connexion.html?message=expired':window.location.href = 'connexion.html';
+      } else {
+        data.sort((a, b) => parseFloat(b.id) - parseFloat(a.id));
+        for (let i = 0; i < data.length; i++) {
+          createContent(data[i]);
+        }
+      }
+
+
   })
   .then(() => {
     del();
