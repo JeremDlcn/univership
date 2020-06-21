@@ -9,9 +9,11 @@ fetch(`https://univership.herokuapp.com/list`, {
   .then(r => r.json())
   .then(data => {
       console.log(data);
-      if (data.error !== undefined) {
-        console.log(data.error);
-        data.error == 'token expired' ? window.location.href = '../connexion.html?message=expired':window.location.href = 'connexion.html';
+      if (data.status !== undefined) {
+        console.log(data.status);
+        if (data.status == 'token expired') { window.location.href = '../connexion.html?message=expired'; localStorage.removeItem('token');};
+        if (data.status == 'token not found') window.location.href = '../connexion.html?message=connect'
+        else window.location.href = '../connexion.html';
       } else {
         data.sort((a, b) => parseFloat(b.id) - parseFloat(a.id));
         for (let i = 0; i < data.length; i++) {

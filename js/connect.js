@@ -1,6 +1,7 @@
 // récupération de l'id de l'article
 const mes = location.search.split('message=')[1];
 if (mes === 'expired') showError("Votre session à expiré, veuillez vous reconnectez");
+if (mes === 'connect') showError("Veuillez vous connecter pour accéder à l'administration");
 
 
 document.querySelector('#send').addEventListener('click', ()=>{
