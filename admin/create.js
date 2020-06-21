@@ -74,6 +74,7 @@ document.querySelector('button').addEventListener('click', () => {
     })
     .then(r => r.json())
     .then(data =>{
-        alert("Votre session à expiré, veuillez sauvegarder votre travail et vous reconnectez pour pouvoir enregistrer votre travail");
+        if (data.status === 'token expired') alert("Votre session à expiré, veuillez copier votre travail quelque part et vous reconnectez pour pouvoir enregistrer votre travail");
+
     })
 });
