@@ -8,9 +8,7 @@ fetch(`https://univership.herokuapp.com/list`, {
 })
   .then(r => r.json())
   .then(data => {
-      console.log(data);
       if (data.status !== undefined) {
-        console.log(data.status);
         if (data.status == 'token expired') { window.location.href = '../connexion.html?message=expired'; localStorage.removeItem('token');};
         if (data.status == 'token not found') window.location.href = '../connexion.html?message=connect'
         else window.location.href = '../connexion.html';
@@ -20,8 +18,6 @@ fetch(`https://univership.herokuapp.com/list`, {
           createContent(data[i]);
         }
       }
-
-
   })
   .then(() => {
     del();
@@ -119,7 +115,11 @@ function del() {
       document.querySelector('dialog').showModal();
       document.querySelector('#yes').addEventListener('click', ()=>{
         fetch(`https://univership.herokuapp.com/article/delete/${art.getAttribute("nb")}`, {
-          method: "DELETE"
+          method: "DELETE",
+          headers: { 
+            'Authorization': 'Bearer ' + localStorage.getItem('token'),
+            'Content-Type': 'application/json'
+          }
         })
         art.remove();
         document.querySelector('dialog').close();

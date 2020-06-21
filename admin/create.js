@@ -71,7 +71,9 @@ document.querySelector('button').addEventListener('click', () => {
             img: img,
             visibility: visibility
         })
-    }).then(()=>{
-        window.location.href = "list-article.html"
+    })
+    .then(r => r.json())
+    .then(data =>{
+        alert("Votre session à expiré, veuillez sauvegarder votre travail et vous reconnectez pour pouvoir enregistrer votre travail");
     })
 });
