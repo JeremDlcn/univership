@@ -122,13 +122,14 @@ document.querySelector('.view-button').addEventListener('click', ()=>{
 document.querySelector('.save-button').addEventListener('click', ()=>{
   let catC = document.querySelector('#edit-category');
   let cat = catC.options[catC.selectedIndex].value;
+  let categ = getCategory(cat);
   let img = document.querySelector('#img-input').value;
   let visib = document.querySelector('#edit-visibility').value;
   let cont = tinymce.activeEditor.getContent();
   disableEditor();
   defineVisibility(visib);
   document.querySelector('#title').innerHTML = document.querySelector('#edit-title').value;
-  document.querySelector('#category-value').innerHTML = cat;
+  document.querySelector('#category-value').innerHTML = categ;
   document.querySelector('#content').innerHTML = cont;
   document.querySelector('#img').src = img;
   edit();
