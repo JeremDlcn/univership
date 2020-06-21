@@ -9,9 +9,9 @@ fetch(`https://univership.herokuapp.com/expired`, {
 })
 .then(r => r.json())
 .then((data)=>{
+    console.log(data);
     if (data.status !== undefined) {
-        if (data.status == 'token expired') { localStorage.removeItem('token'); link.href = "connexion.html";};
+        if (data.status == 'token expired') localStorage.removeItem('token');
         if (data.status == 'valid') link.href = "admin/list-article.html";
     }
-    else link.href = "connexion.html";
 })
