@@ -1,4 +1,4 @@
-if (localStorage.getItem('rgpd') !== true) createPopup();
+if (localStorage.getItem('rgpd') !== "true") createPopup();
 
 
 function createPopup(){
